@@ -45,5 +45,8 @@ Route::get('/single-event', function () {
 Route::get('/indexdash', function () {
     return view('dashboard.index');
 })->name('index');
+Route::get('/dash', function () {
+    return view('dashboard.dash');
+})->name('dash');
 
 require __DIR__.'/auth.php';
