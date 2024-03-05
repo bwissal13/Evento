@@ -47,6 +47,17 @@
            @include('layout.footer')
 
                 <!-- FOOTER END -->
-           
+                {{-- @vite(['resources/js/aos.js'])
+                @vite(['resources/js/jquery.3.5.1.min.js'])
+                @vite(['resources/js/maiviten.js'])
+                @vite(['resources/js/countdown-dugem.js'])
+                @vite(['resources/js/dugem-lightbox.js'])
+                @vite(['resources/js/dugem-carousel.js'])
+                @vite(['resources/js/demo1.js'])
+                @vite(['resources/js/jquery.smartmenus.min.js'])
+                @vite(['resources/js/swiper-bundle.min.js'])
+                @vite(['resources/js/lightgallery.min.js']) --}}
+               
+
 <!-- Mirrored from html.themesawesome.com/dugemhtml/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Mar 2024 18:21:25 GMT -->
 </html>

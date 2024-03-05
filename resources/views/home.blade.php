@@ -14,7 +14,7 @@
                     <div class="image-title">
                         <p>Creating moments to remember</p>
                         <p> </p>
-                        <a href="#" class="button-basic-1" data-aos="fade-up">All Events</a>
+                        <a href="#" class="button-basic-1" >All Events</a>
                     </div>
                     <div class="video-background">
                         <video autoplay muted loop id="myVideo">
@@ -291,7 +291,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-slide">
+                    {{-- <div class="blog-slide">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -422,7 +422,43 @@
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
+                    </div> --}}
+                    <div class="blog-slide">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                @foreach($events as $event)
+                                    <div class="swiper-slide">
+                                        <div class="swiper-post">
+                                            <div class="post-thumb">
+                                                <a href="{{ route('events.show', $event->id) }}">
+                                                    <img src="{{ asset('img/latest-blog-news-1.png') }}" alt="latest-news-img-1">
+                                                    <div class="dugem-overlay"></div>
+                                                </a>
+                                            </div>
+                                            <div class="post-content-wrap">
+                                                <div class="post-category">
+                                                    <a href="{{ route('categories.show', $event->category->id) }}" class="button-basic-1">{{ $event->category->name }}</a>
+                                                </div>
+                                                <div class="post-title">
+                                                    <h3>
+                                                        <a href="{{ route('events.show', $event->id) }}">
+                                                            {{ $event->title }}
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="post-date">
+                                                    <a href="#">
+                                                        <span>{{ $event->date->format('F d, Y') }}</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
                 <!-- BLOG LOOP END -->
 

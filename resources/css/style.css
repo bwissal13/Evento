@@ -403,6 +403,7 @@ figure {
   background-color: rgba(255, 44, 85, 0);
   border-color: #ff2c55;
   border-radius: 50px 50px 50px 50px;
+  z-index: 1000000;
 }
 
 .button-basic-1:hover {

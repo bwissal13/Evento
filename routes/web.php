@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,4 +52,6 @@ Route::get('/dash', function () {
     return view('dashboard.dash');
 })->name('dash');
 
+Route::resource('events', EventController::class);
+Route::resource('categories', CategoryController::class);
 require __DIR__.'/auth.php';

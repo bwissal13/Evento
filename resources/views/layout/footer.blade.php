@@ -37,15 +37,16 @@
             <!-- MAIN WRAPPER END -->
             <!-- FOOTER SCRIPTS
                 ============================================= -->
-                @(['resources/js/aos.js'])
-                @vite(['resources/js/jquery.3.5.1.min.js'])
-                @vite(['resources/js/maiviten.js'])
-                @vite(['resources/js/countdown-dugem.js'])
-                @vite(['resources/js/dugem-lightbox.js'])
-                @vite(['resources/js/dugem-carousel.js'])
-                @vite(['resources/js/demo1.js'])
-                @vite(['resources/js/jquery.smartmenus.min.js'])
-                @vite(['resources/js/swiper-bundle.min.js'])
-                @vite(['resources/js/lightgallery.min.js'])
-
+                <script src="{{ asset('js/jquery.3.5.1.min.js') }}"></script>
+                <script src="{{ asset('js/main.js') }}"></script>
+                <script src="{{ asset('js/countdown-dugem.js') }}"></script>
+                <script src="{{ asset('js/dugem-lightbox.js') }}"></script>
+                <script src="{{ asset('js/dugem-carousel.js') }}"></script>
+                <script src="{{ asset('js/aos.js') }}"></script>
+                <script src="{{ asset('js/demo1.js') }}"></script>
+                <script src="{{ asset('js/jquery.smartmenus.min.js') }}"></script>
+                <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+                <script src="{{ asset('js/lightgallery.min.js') }}"></script>
+                <script src="{{ asset('js/aos.js') }}"></script>
+                   
                 

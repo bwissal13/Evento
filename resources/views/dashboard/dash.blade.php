@@ -7,1205 +7,1251 @@
     <title>Document</title>
     @vite(['resources/css/app.css'])
 </head>
-<body>
-   <!-- component -->
-<!DOCTYPE html>
-<html class="h-full" lang="en">
+<!-- component -->
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<style>
+    :root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+</style>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="./tailwind.css" />
-    <title>Chi Desk</title>
-    <style>
-        html {
-            font-size: 14px;
-            line-height: 1.285;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial,
-                sans-serif;
-        }
-
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* can be configured in tailwind.config.js */
-        .group:hover .group-hover\:block {
-            display: block;
-        }
-
-        .focus\:cursor-text:focus {
-            cursor: text;
-        }
-
-        .focus\:w-64:focus {
-            width: 16rem;
-        }
-
-        /* zendesk styles */
-        .h-16 {
-            height: 50px;
-        }
-
-        .bg-teal-900 {
-            background: #03363d;
-        }
-
-        .bg-gray-100 {
-            background: #f8f9f9;
-        }
-
-        .hover\:border-green-500:hover {
-            border-color: #78a300;
-        }
-    </style>
-</head>
-
-<body class="antialiased h-full">
-    <!-- you can clone or fork the repo if you want -->
-    <!-- https://github.com/bluebrown/tailwind-zendesk-clone   -->
-
-    <div class="h-full w-full flex overflow-hidden antialiased text-gray-800 bg-white">
-        <!-- section body side nav -->
-        <nav aria-label="side bar" aria-orientation="vertical"
-            class="flex-none flex flex-col items-center text-center bg-teal-900 text-gray-400 border-r">
-            <div class="h-16 flex items-center w-full">
-                <img class="h-6 w-6 mx-auto" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/leaves.png" />
+<div class="antialiased bg-black w-full min-h-screen text-slate-300 relative py-4">
+    <div class="grid grid-cols-12 mx-auto gap-2 sm:gap-4 md:gap-6 lg:gap-10 xl:gap-14 max-w-7xl my-10 px-2">
+        <div id="menu" class="bg-white/10 col-span-3 rounded-lg p-4 ">
+            <h1 class="font-bold text-lg lg:text-3xl bg-gradient-to-br from-white via-white/50 to-transparent bg-clip-text text-transparent">Dashboard<span class="text-indigo-400">.</span></h1>
+            <p class="text-slate-400 text-sm mb-2">Welcome back,</p>
+            <a href="#" class="flex flex-col space-y-2 md:space-y-0 md:flex-row mb-5 items-center md:space-x-2 hover:bg-white/10 group transition duration-150 ease-linear rounded-lg group w-full py-3 px-2">
+                <div>
+                    <img class="rounded-full w-10 h-10 relative object-cover" src="https://img.freepik.com/free-photo/no-problem-concept-bearded-man-makes-okay-gesture-has-everything-control-all-fine-gesture-wears-spectacles-jumper-poses-against-pink-wall-says-i-got-this-guarantees-something_273609-42817.jpg?w=1800&t=st=1669749937~exp=1669750537~hmac=4c5ab249387d44d91df18065e1e33956daab805bee4638c7fdbf83c73d62f125" alt="">
+                </div>
+                <div>
+                    <p class="font-medium group-hover:text-indigo-400 leading-4">Jim Smith</p>
+                    <span class="text-xs text-slate-400">Pantazi LLC</span>
+                </div>
+            </a>
+            <hr class="my-2 border-slate-700">
+            <div id="menu" class="flex flex-col space-y-2 my-5">
+                <a href="#" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                              </svg>
+                              
+                        </div>
+                        <div>
+                            <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Dashboard</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Data overview</p>
+                        </div>
+                        
+                    </div>
+                </a>
+                <a href="#" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="relative flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                              </svg>                              
+                        </div>
+                        <div>
+                            <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Invoices</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Manage invoices</p>
+                        </div>
+                        <div class="absolute -top-3 -right-3 md:top-0 md:right-0 px-2 py-1.5 rounded-full bg-indigo-800 text-xs font-mono font-bold">23</div>
+                    </div>
+                </a>
+                <a href="#" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                              </svg>                              
+                        </div>
+                        <div>
+                            <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Users</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Manage users</p>
+                        </div>
+                        
+                    </div>
+                </a>
+                <a href="#" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                                
+                        </div>
+                        <div>
+                            <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Settings</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Edit settings</p>
+                        </div>
+                        
+                    </div>
+                </a>
             </div>
-
-            <ul>
-                <li>
-                    <a title="Home" href="#home" class="h-16 px-6 flex items-center text-white bg-teal-700 w-full">
-                        <i class="mx-auto">
-            <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z" />
-            </svg>
-          </i>
-                    </a>
-                </li>
-                <li>
-                    <a title="Views" href="#views" class="h-16 px-6 flex items-center hover:text-white w-full">
-                        <i class="mx-auto">
-            <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M18.546 3h-13.069l-5.477 8.986v9.014h24v-9.014l-5.454-8.986zm-3.796 12h-5.5l-2.25-3h-4.666l4.266-7h10.82l4.249 7h-4.669l-2.25 3zm-9.75-4l.607-1h12.787l.606 1h-14zm12.18-3l.607 1h-11.573l.607-1h10.359zm-1.214-2l.606 1h-9.144l.607-1h7.931z" />
-            </svg>
-          </i>
-                    </a>
-                </li>
-                <li>
-                    <a title="Customer Lists" href="#customer-lists"
-                        class="h-16 px-6 flex items-center hover:text-white w-full">
-                        <i class="mx-auto">
-            <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z" />
-            </svg>
-          </i>
-                    </a>
-                </li>
-                <li>
-                    <a title="Reporting" href="#reporting" class="h-16 px-6 flex items-center hover:text-white w-full">
-                        <i class="mx-auto">
-            <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M5 19h-4v-4h4v4zm6 0h-4v-8h4v8zm6 0h-4v-13h4v13zm6 0h-4v-19h4v19zm1 2h-24v2h24v-2z" />
-            </svg>
-          </i>
-                    </a>
-                </li>
-                <li>
-                    <a title="Admin" href="#admin" class="h-16 px-6 flex items-center hover:text-white w-full">
-                        <i class="mx-auto">
-            <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M24 13.616v-3.232c-1.651-.587-2.694-.752-3.219-2.019v-.001c-.527-1.271.1-2.134.847-3.707l-2.285-2.285c-1.561.742-2.433 1.375-3.707.847h-.001c-1.269-.526-1.435-1.576-2.019-3.219h-3.232c-.582 1.635-.749 2.692-2.019 3.219h-.001c-1.271.528-2.132-.098-3.707-.847l-2.285 2.285c.745 1.568 1.375 2.434.847 3.707-.527 1.271-1.584 1.438-3.219 2.02v3.232c1.632.58 2.692.749 3.219 2.019.53 1.282-.114 2.166-.847 3.707l2.285 2.286c1.562-.743 2.434-1.375 3.707-.847h.001c1.27.526 1.436 1.579 2.019 3.219h3.232c.582-1.636.75-2.69 2.027-3.222h.001c1.262-.524 2.12.101 3.698.851l2.285-2.286c-.744-1.563-1.375-2.433-.848-3.706.527-1.271 1.588-1.44 3.221-2.021zm-12 2.384c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z" />
-            </svg>
-          </i>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="mt-auto h-16 flex items-center w-full">
-                <img style="filter: invert(85%);" class="h-8 w-10 mx-auto" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/chi.png" />
-            </div>
-        </nav>
-
-        <div class="flex-1 flex flex-col">
-            <!-- section body top nav -->
-            <nav aria-label="top bar" class="flex-none flex justify-between bg-white h-16">
-
-                <!-- top bar left -->
-                <ul aria-label="top bar left" aria-orientation="horizontal" class="flex">
-                    <!-- add button -->
-                    <li class="group relative">
-                        <button aria-controls="add" aria-expanded="false" aria-haspopup="listbox" class="flex items-center h-full px-4 text-sm">
-            <i>
-              <svg class="fill-current w-3 h-3 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M24 10h-10v-10h-2v10h-10v2h10v10h2v-10h10z" />
-              </svg>
-            </i>
-            <span class="ml-2">Add</span>
-          </button>
-                        <span class="absolute p-1 hidden group-hover:block">
-            <ul id="add" role="listbox" class="outline-none py-2 bg-white border rounded-md w-screen max-w-md w-dropdown-large shadow-lg focus:outline-none leading-relaxed">
-              <li role="separator" class="mb-2">
-                <label class="block px-4 py-3 font-semibold">
-                  New
-                </label>
-                <hr />
-              </li>
-              <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-                Ticket
-              </li>
-              <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-                User
-              </li>
-              <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-                Organization
-              </li>
-              <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-                Search
-              </li>
-              <li role="separator" class="mb-2">
-                <label class="block px-4 py-3 font-semibold">Recently Viewed</label>
-                <hr />
-              </li>
-              <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-                <div class="flex">
-                  <div class="pr-2">
-                    <span style="padding: 2px 5px; font-size: 0.7rem;" class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
+            <p class="text-sm text-center text-gray-600">v2.0.0.3 | &copy; 2022 Pantazi Soft</p>
         </div>
-        <div class="flex-1">
-            <p>Vertias - ams opps issue</p>
-            <p class="text-gray-600">
-                <span>#ticket/14352</span>
-                <span class="mx-1 font-black">&#183;</span>
-                <span>Nico Braun</span>
-            </p>
+        <div id="content" class="bg-white/10 col-span-9 rounded-lg p-6">
+            <div id="24h">
+                <h1 class="font-bold py-4 uppercase">Last 24h Statistics</h1>
+                <div id="stats" class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-black/60 to-white/5 p-6 rounded-lg">
+                        <div class="flex flex-row space-x-4 items-center">
+                            <div id="stats-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                  </svg>
+                            </div>
+                            <div>
+                                <p class="text-indigo-300 text-sm font-medium uppercase leading-4">Users</p>
+                                <p class="text-white font-bold text-2xl inline-flex items-center space-x-2">
+                                    <span>+28</span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                          </svg>
+                                          
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-black/60 p-6 rounded-lg">
+                        <div class="flex flex-row space-x-4 items-center">
+                            <div id="stats-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  
+                            </div>
+                            <div>
+                                <p class="text-teal-300 text-sm font-medium uppercase leading-4">Income</p>
+                                <p class="text-white font-bold text-2xl inline-flex items-center space-x-2">
+                                    <span>$2,873.88</span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                          </svg>
+                                          
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-black/60 p-6 rounded-lg">
+                        <div class="flex flex-row space-x-4 items-center">
+                            <div id="stats-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                  </svg>
+                                  
+                            </div>
+                            <div>
+                                <p class="text-blue-300 text-sm font-medium uppercase leading-4">Invoices</p>
+                                <p class="text-white font-bold text-2xl inline-flex items-center space-x-2">
+                                    <span>+79</span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                          </svg>
+                                          
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="last-incomes">
+                <h1 class="font-bold py-4 uppercase">Last 24h incomes</h1>
+                <div id="stats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                    <div class="bg-black/60 to-white/5 rounded-lg">
+                            <div class="flex flex-row items-center">
+                                <div class="text-3xl p-4">💰</div>
+                                <div class="p-2">
+                                    <p class="text-xl font-bold">348$</p>
+                                    <p class="text-gray-500 font-medium">Amber Gates</p>
+                                    <p class="text-gray-500 text-sm">24 Nov 2022</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-white/5 p-4">
+                                <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                      </svg>
+                                      <span>Info</span>                                      
+                                </a>
+                            </div>
+                    </div>
+                    <div class="bg-black/60 to-white/5 rounded-lg">
+                        <div class="flex flex-row items-center">
+                            <div class="text-3xl p-4">💰</div>
+                            <div class="p-2">
+                                <p class="text-xl font-bold">68$</p>
+                                <p class="text-gray-500 font-medium">Maia Kipper</p>
+                                <p class="text-gray-500 text-sm">23 Nov 2022</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/5 p-4">
+                            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                  </svg>
+                                  <span>Info</span>                                      
+                            </a>
+                        </div>
+                </div>
+                <div class="bg-black/60 to-white/5 rounded-lg">
+                    <div class="flex flex-row items-center">
+                        <div class="text-3xl p-4">💰</div>
+                        <div class="p-2">
+                            <p class="text-xl font-bold">12$</p>
+                            <p class="text-gray-500 font-medium">Oprah Milles</p>
+                            <p class="text-gray-500 text-sm">23 Nov 2022</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/5 p-4">
+                        <a href="#" class="inline-flex space-x-2 items-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                              </svg>
+                              <span>Info</span>                                      
+                        </a>
+                    </div>
+            </div>
+            <div class="bg-black/60 to-white/5 rounded-lg">
+                <div class="flex flex-row items-center">
+                    <div class="text-3xl p-4">💰</div>
+                    <div class="p-2">
+                        <p class="text-xl font-bold">105$</p>
+                        <p class="text-gray-500 font-medium">Jonny Nite</p>
+                        <p class="text-gray-500 text-sm">23 Nov 2022</p>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 p-4">
+                    <a href="#" class="inline-flex space-x-2 items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                          <span>Info</span>                                      
+                    </a>
+                </div>
+        </div>
+        <div class="bg-black/60 to-white/5 rounded-lg">
+            <div class="flex flex-row items-center">
+                <div class="text-3xl p-4">💰</div>
+                <div class="p-2">
+                    <p class="text-xl font-bold">52$</p>
+                    <p class="text-gray-500 font-medium">Megane Baile</p>
+                    <p class="text-gray-500 text-sm">22 Nov 2022</p>
+                </div>
+            </div>
+            <div class="border-t border-white/5 p-4">
+                <a href="#" class="inline-flex space-x-2 items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                      </svg>
+                      <span>Info</span>                                      
+                </a>
+            </div>
+    </div>
+    <div class="bg-black/60 to-white/5 rounded-lg">
+        <div class="flex flex-row items-center">
+            <div class="text-3xl p-4">💰</div>
+            <div class="p-2">
+                <p class="text-xl font-bold">28$</p>
+                <p class="text-gray-500 font-medium">Tony Ankel</p>
+                <p class="text-gray-500 text-sm">22 Nov 2022</p>
+            </div>
+        </div>
+        <div class="border-t border-white/5 p-4">
+            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                  <span>Info</span>                                      
+            </a>
+        </div>
+</div>
+                </div>
+            </div>
+            <div id="last-users">
+                <h1 class="font-bold py-4 uppercase">Last 24h users</h1>
+                <div class="overflow-x-scroll">
+                    <table class="w-full whitespace-nowrap">
+                        <thead class="bg-black/60">
+                            <th class="text-left py-3 px-2 rounded-l-lg">Name</th>
+                            <th class="text-left py-3 px-2">Email</th>
+                            <th class="text-left py-3 px-2">Group</th>
+                            <th class="text-left py-3 px-2">Status</th>
+                            <th class="text-left py-3 px-2 rounded-r-lg">Actions</th>
+                        </thead>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg" alt=""></span>
+                                    <span>Thai Mei</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">thai.mei@abc.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Edit password" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Suspend user" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                      </svg>
+                                      </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg" alt=""></span>
+                                    <span>Thai Mei</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">thai.mei@abc.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Edit password" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Suspend user" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                      </svg>
+                                      </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg" alt=""></span>
+                                    <span>Thai Mei</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">thai.mei@abc.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Edit password" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Suspend user" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                      </svg>
+                                      </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/niCVbIBAm4hahzwS83HoEtcVEIactkKohOzgXWYY4lM/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTk4ODczLmpwZw.jpg" alt=""></span>
+                                    <span>Marquez Spineli</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">marquez.spineli@cba.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Edit password" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Suspend user" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                      </svg>
+                                      </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/f_xU7q780YXiKG7IwKVV05eU6Sj2nIodEkN1S8GyM2M/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDk2MTc4LmpwZw.jpg" alt=""></span>
+                                    <span>Mark Spike</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">mark.spike@abc.com</td>
+                            <td class="py-3 px-2">Administrator</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Edit password" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                      </svg>
+                                      </a>
+                                    <a href="" title="Suspend user" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                      </svg>
+                                      </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        
+                    </table>
+                </div>
+            </div>
+           
         </div>
     </div>
-    </li>
-    <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-        <div class="flex">
-            <div class="pr-2">
-                <span style="padding: 2px 5px; font-size: 0.7rem;" class="font-mono rounded-sm bg-yellow-400 text-black leading-none">N</span>
-            </div>
-            <div class="flex-1">
-                <p>Vertias - ams opps issue</p>
-                <p class="text-gray-600">
-                    <span>#ticket/14352</span>
-                    <span class="mx-1 font-black">&#183;</span>
-                    <span>Nico Braun</span>
-                </p>
-            </div>
-        </div>
-    </li>
-    <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-        <div class="flex">
-            <div class="pr-2">
-                <span style="padding: 2px 5px; font-size: 0.7rem;" class="font-mono rounded-sm bg-gray-500 text-white leading-none">S</span>
-            </div>
-            <div class="flex-1">
-                <p>Vertias - ams opps issue</p>
-                <p class="text-gray-600">
-                    <span>#ticket/14352</span>
-                    <span class="mx-1 font-black">&#183;</span>
-                    <span>Nico Braun</span>
-                </p>
-            </div>
-        </div>
-    </li>
-    <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-        <div class="flex">
-            <div class="pr-2">
-                <span style="padding: 2px 5px; font-size: 0.7rem;" class="font-mono rounded-sm bg-blue-600 text-white leading-none">P</span>
-            </div>
-            <div class="flex-1">
-                <p>Vertias - ams opps issue</p>
-                <p class="text-gray-600">
-                    <span>#ticket/14352</span>
-                    <span class="mx-1 font-black">&#183;</span>
-                    <span>Nico Braun</span>
-                </p>
-            </div>
-        </div>
-    </li>
-
-    <li role="option" class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer">
-        <div class="flex">
-            <div class="pr-2">
-                <span style="padding: 2px 5px; font-size: 0.7rem;" class="font-mono rounded-sm bg-gray-800 text-white leading-none">H</span>
-            </div>
-            <div class="flex-1">
-                <p>Vertias - ams opps issue</p>
-                <p class="text-gray-600">
-                    <span>#ticket/14352</span>
-                    <span class="mx-1 font-black">&#183;</span>
-                    <span>Nico Braun</span>
-                </p>
-            </div>
-        </div>
-    </li>
-    </ul>
-    </span>
-    </li>
-    </ul>
-
-    <!-- to bar right  -->
-    <ul aria-label="top bar right" aria-orientation="horizontal" class="px-8 flex items-center">
-        <li class="relative">
-            <input title="Search Bar" aria-label="search bar" role="search" class="pr-8 pl-4 py-2 rounded-md cursor-pointer transition-all duration-300 ease-in-out focus:border-black focus:cursor-text w-4 focus:w-64 placeholder-transparent focus:placeholder-gray-500" type="text" placeholder="Search Chi Desk Support" />
-            <i class="pointer-events-none absolute top-0 right-0 h-full flex items-center pr-3">
-            <svg class="fill-current w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
+</div>
+{{-- <body>
+    <div class="bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-600 h-screen flex overflow-hidden text-sm">
+        <div class="bg-white dark:bg-gray-900 dark:border-gray-800 w-20 flex-shrink-0 border-r border-gray-200 flex-col hidden sm:flex">
+          <div class="h-16 text-blue-500 flex items-center justify-center">
+            <svg class="w-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
+              <path fill="currentColor" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd" />
             </svg>
-          </i>
-        </li>
-
-        <li class="h-8 w-8 ml-3">
-            <button title="Notifications" aria-label="notifications" class="w-full h-full text-white bg-gray-600 rounded-md focus:outline-none focus:shadow-outline">
-            <i>
-              <svg class="fill-current w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M15.137 3.945c-.644-.374-1.042-1.07-1.041-1.82v-.003c.001-1.172-.938-2.122-2.096-2.122s-2.097.95-2.097 2.122v.003c.001.751-.396 1.446-1.041 1.82-4.667 2.712-1.985 11.715-6.862 13.306v1.749h20v-1.749c-4.877-1.591-2.195-10.594-6.863-13.306zm-3.137-2.945c.552 0 1 .449 1 1 0 .552-.448 1-1 1s-1-.448-1-1c0-.551.448-1 1-1zm3 20c0 1.598-1.392 3-2.971 3s-3.029-1.402-3.029-3h6z" />
+          </div>
+          <div class="flex mx-auto flex-grow mt-4 flex-col text-gray-400 space-y-4">
+            <button class="h-10 w-12 dark:text-gray-500 rounded-md flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="h-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
               </svg>
-            </i>
-          </button>
-        </li>
-
-        <li class="h-8 w-8 ml-3">
-            <button title="v2 REPL" aria-label="repl" class="w-full h-full text-white bg-gray-600 rounded-md focus:outline-none focus:shadow-outline">
-            <i>
-              <svg class="fill-current w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M22 6v16h-20v-16h20zm2-6h-24v24h24v-24zm-11 11v1.649l3.229 1.351-3.229 1.347v1.653l5-2.201v-1.599l-5-2.2zm-7 2.201v1.599l5 2.2v-1.653l-3.229-1.347 3.229-1.351v-1.649l-5 2.201z" />
+            </button>
+            <button class="h-10 w-12 dark:bg-gray-700 dark:text-white rounded-md flex items-center justify-center bg-blue-100 text-blue-500">
+              <svg viewBox="0 0 24 24" class="h-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
-            </i>
-          </button>
-        </li>
-
-        <li class="h-8 w-8 ml-3">
-            <button title="Products" aria-label="chi desk products" class="w-full h-full rounded-md focus:outline-none focus:shadow-outline">
-            <i class="text-gray-600">
-              <svg class="fill-current w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M11 11h-11v-11h11v11zm13 0h-11v-11h11v11zm-13 13h-11v-11h11v11zm13 0h-11v-11h11v11z" />
+            </button>
+            <button class="h-10 w-12 dark:text-gray-500 rounded-md flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="h-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                <line x1="12" y1="11" x2="12" y2="17"></line>
+                <line x1="9" y1="14" x2="15" y2="14"></line>
               </svg>
-            </i>
-          </button>
-        </li>
-
-        <li class="h-10 w-10 ml-3">
-            <button title="Page Menu" aria-label="page menu" class="h-full w-full rounded-full border focus:outline-none focus:shadow-outline">
-            <img class="h-full w-full rounded-full mx-auto" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/me.jpg" />
-          </button>
-        </li>
-    </ul>
-    </nav>
-
-    <!-- section body header -->
-    <header aria-label="page caption" class="flex-none flex h-16 bg-gray-100 border-t px-4 items-center">
-        <h1 id="page-caption" class="font-semibold text-lg">Dashboard</h1>
-    </header>
-
-    <!-- main content -->
-    <main class="flex-grow flex min-h-0 border-t">
-        <!-- section update to tickets -->
-        <section class="flex flex-col p-4 w-full max-w-sm flex-none bg-gray-100 min-h-0 overflow-auto">
-            <h1 class="font-semibold mb-3">
-                Updates to your tickets
-            </h1>
-            <ul>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article tabindex="0"
-                        class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
-                        <span class="flex-none pt-1 pr-2">
-                <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
-              </span>
-                        <div class="flex-1">
-                            <header class="mb-1">
-                                Tarun T <span class="font-semibold">commented</span> on
-                                <h1 class="inline">"RE: WPMS issue".</h1>
-                            </header>
-                            <p class="text-gray-600">
-                                Hi Mazhar, Please note this issue comes when user is not
-                                closing or logout sy…
-                            </p>
-                            <footer class="text-gray-500 mt-2 text-sm">
-                                Friday 22:16
-                            </footer>
-                        </div>
-                    </article>
-                </li>
-            </ul>
-        </section>
-
-        <!-- section content -->
-        <section aria-label="main content" class="flex min-h-0 flex-col flex-auto border-l">
-            <!-- content navigation -->
-            <nav class="bg-gray-100 flex p-4">
-                <!-- open tickets nav -->
-                <section aria-labelledby="open-tickets-tabs-label" class="mr-4 focus:outline-none">
-                    <label id="open-tickets-tabs-label" class="font-semibold block mb-1 text-sm">Open Tickets
-              <span class="font-normal text-gray-700">(current)</span>
-            </label>
-                    <ul class="flex">
-                        <li>
-                            <button class="focus:outline-none focus:bg-yellow-200 p-2 rounded-l-md border border-r-0 bg-white flex flex-col items-center w-24">
-                  <p class="font-semibold text-lg">6</p>
-                  <p class="text-sm uppercase text-gray-600">
-                    You
-                  </p>
-                </button>
-                        </li>
-                        <li>
-                            <button class="focus:outline-none focus:bg-yellow-200 p-2 border rounded-r-md bg-white flex flex-col items-center w-24 cursor-pointer">
-                  <p class="font-semibold text-lg">23</p>
-                  <p class="text-sm uppercase text-gray-600">
-                    Groups
-                  </p>
-                </button>
-                        </li>
-                    </ul>
-                </section>
-                <!-- stats nav -->
-                <section aria-labelledby="ticket-statistics-tabs-label" class="pb-2">
-                    <label id="ticket-statistics-tabs-label" class="font-semibold block mb-1 text-sm">Ticket Statistics
-              <span class="font-normal text-gray-700">(this week)</span></label>
-                    <ul class="flex">
-                        <li>
-                            <button class="focus:outline-none focus:bg-yellow-200 p-2 rounded-l-md border border-r-0 bg-white flex flex-col items-center w-24">
-                  <p class="font-semibold text-lg">16</p>
-                  <p class="uppercase text-gray-600 text-sm">
-                    good
-                  </p>
-                </button>
-                        </li>
-                        <li>
-                            <button class="focus:outline-none focus:bg-yellow-200 p-2 border border-r-0 bg-white flex flex-col items-center w-24">
-                  <p class="font-semibold text-lg">2</p>
-                  <p class="uppercase text-gray-600 text-sm">
-                    bad
-                  </p>
-                </button>
-                        </li>
-
-                        <li>
-                            <button class="focus:outline-none focus:bg-yellow-200 p-2 border rounded-r-md bg-white flex flex-col items-center w-24">
-                  <p class="font-semibold text-lg">32</p>
-                  <p class="uppercase text-gray-600 text-sm">
-                    solved
-                  </p>
-                </button>
-                        </li>
-                    </ul>
-                </section>
-            </nav>
-
-            <!-- content caption -->
-            <header class="bg-white border-t flex items-center py-1 px-4">
-                <div class="flex">
-                    <h2 id="content-caption" class="font-semibold">
-                        Tickets requiring your attention (6)
-                    </h2>
-                    <span class="ml-3 group relative">
-              <button role="details" aria-controls="info-popup" class="text-blue-700 border-b border-dotted border-blue-700 focus:outline-none text-sm">
-                What is this?
+            </button>
+            <button class="h-10 w-12 dark:text-gray-500 rounded-md flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="h-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="flex-grow overflow-hidden h-full flex flex-col">
+          <div class="h-16 lg:flex w-full border-b border-gray-200 dark:border-gray-800 hidden px-10">
+            <div class="flex h-full text-gray-600 dark:text-gray-400">
+              <a href="#" class="cursor-pointer h-full border-b-2 border-transparent inline-flex items-center mr-8">Company</a>
+              <a href="#" class="cursor-pointer h-full border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white inline-flex mr-8 items-center">Users</a>
+              <a href="#" class="cursor-pointer h-full border-b-2 border-transparent inline-flex items-center mr-8">Expense Centres</a>
+              <a href="#" class="cursor-pointer h-full border-b-2 border-transparent inline-flex items-center">Currency Exchange</a>
+            </div>
+            <div class="ml-auto flex items-center space-x-7">
+              <button class="h-8 px-3 rounded-md shadow text-white bg-blue-500">Deposit</button>
+      
+              <button class="flex items-center">
+                <span class="relative flex-shrink-0">
+                  <img class="w-7 h-7 rounded-full" src="https://images.unsplash.com/photo-1521587765099-8835e7201186?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="profile" />
+                  <span class="absolute right-0 -mb-0.5 bottom-0 w-2 h-2 rounded-full bg-green-500 border border-white dark:border-gray-900"></span>
+                </span>
+                <span class="ml-2">James Smith</span>
+                <svg viewBox="0 0 24 24" class="w-4 ml-1 flex-shrink-0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
               </button>
-              <div role="tooltip" id="info-popup" class="absolute pt-1 rounded-md rounded-t-lg right-0 transform translate-x-40 mx-auto hidden group-hover:block z-50">
-                <div class="border rounded-md rounded-t-lg shadow-lg bg-white w-full max-w-xs w-screen">
-                  <header class="font-semibold rounded-t-lg bg-gray-300 px-4 py-2">
-                    People are waiting for replies!
-                  </header>
-                  <div class="p-4 border-t">
-                    <p class="mb-4">
-                      These are new or open tickets that are assigned to
-                      you, unassinged in your group(s) or not assigned to
-                      any group.
-                    </p>
-                    <p class="mb-1">
-                      They are ordered by priority and requester update date
-                      (oldest first).
-                    </p>
+            </div>
+          </div>
+          <div class="flex-grow flex overflow-x-hidden">
+            <div class="xl:w-72 w-48 flex-shrink-0 border-r border-gray-200 dark:border-gray-800 h-full overflow-y-auto lg:block hidden p-5">
+              <div class="text-xs text-gray-400 tracking-wider">USERS</div>
+              <div class="relative mt-2">
+                <input type="text" class="pl-8 h-9 bg-transparent border border-gray-300 dark:border-gray-700 dark:text-white w-full rounded-md text-sm" placeholder="Search" />
+                <svg viewBox="0 0 24 24" class="w-4 absolute text-gray-400 top-1/2 transform translate-x-0.5 -translate-y-1/2 left-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <div class="space-y-4 mt-3">
+                <button class="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow">
+                  <div class="flex xl:flex-row flex-col items-center font-medium text-gray-900 dark:text-white pb-2 mb-2 xl:border-b border-gray-200 border-opacity-75 dark:border-gray-700 w-full">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=046c29138c1335ef8edee7daf521ba50" class="w-7 h-7 mr-2 rounded-full" alt="profile" />
+                    Kathyrn Murphy
+                  </div>
+                  <div class="flex items-center w-full">
+                    <div class="text-xs py-1 px-2 leading-none dark:bg-gray-900 bg-blue-100 text-blue-500 rounded-md">Design</div>
+                    <div class="ml-auto text-xs text-gray-500">$1,902.00</div>
+                  </div>
+                </button>
+                <button class="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow-lg relative ring-2 ring-blue-500 focus:outline-none">
+                  <div class="flex xl:flex-row flex-col items-center font-medium text-gray-900 dark:text-white pb-2 mb-2 xl:border-b border-gray-200 border-opacity-75 dark:border-gray-700 w-full">
+                    <img src="https://assets.codepen.io/344846/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1582611188&width=512" class="w-7 h-7 mr-2 rounded-full" alt="profile" />
+                    Mert Cukuren
+                  </div>
+                  <div class="flex items-center w-full">
+                    <div class="text-xs py-1 px-2 leading-none dark:bg-gray-900 bg-green-100 text-green-600 rounded-md">Sales</div>
+                    <div class="ml-auto text-xs text-gray-500">$2,794.00</div>
+                  </div>
+                </button>
+                <button class="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow">
+                  <div class="flex xl:flex-row flex-col items-center font-medium text-gray-900 dark:text-white pb-2 mb-2 xl:border-b border-gray-200 border-opacity-75 dark:border-gray-700 w-full">
+                    <img src="https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" class="w-7 h-7 mr-2 rounded-full" alt="profile" />
+                    Albert Flores
+                  </div>
+                  <div class="flex items-center w-full">
+                    <div class="text-xs py-1 px-2 leading-none dark:bg-gray-900 bg-yellow-100 text-yellow-600 rounded-md">Marketing</div>
+                    <div class="ml-auto text-xs text-gray-400">$0.00</div>
+                  </div>
+                </button>
+                <button class="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow">
+                  <div class="flex xl:flex-row flex-col items-center font-medium text-gray-900 dark:text-white pb-2 mb-2 xl:border-b border-gray-200 border-opacity-75 dark:border-gray-700 w-full">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" class="w-7 h-7 mr-2 rounded-full" alt="profile" />
+                    Jane Cooper
+                  </div>
+                  <div class="flex items-center w-full">
+                    <div class="text-xs py-1 px-2 leading-none dark:bg-gray-900 bg-blue-100 text-blue-500 rounded-md">Design</div>
+                    <div class="ml-auto text-xs text-gray-500">$762.00</div>
+                  </div>
+                </button>
+                <button class="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow">
+                  <div class="flex xl:flex-row flex-col items-center font-medium text-gray-900 dark:text-white pb-2 mb-2 xl:border-b border-gray-200 border-opacity-75 dark:border-gray-700 w-full">
+                    <img src="https://images.unsplash.com/photo-1507120878965-54b2d3939100?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=99fbace66d1bfa48c9c6dc8afcac3aab" class="w-7 h-7 mr-2 rounded-full" alt="profile" />
+                    Ronald Richards
+                  </div>
+                  <div class="flex items-center w-full">
+                    <div class="text-xs py-1 px-2 leading-none dark:bg-gray-900 bg-green-100 text-green-600 rounded-md">Sales</div>
+                    <div class="ml-auto text-xs text-gray-400">$0.00</div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="flex-grow bg-white dark:bg-gray-900 overflow-y-auto">
+              <div class="sm:px-7 sm:pt-7 px-4 pt-4 flex flex-col w-full border-b border-gray-200 bg-white dark:bg-gray-900 dark:text-white dark:border-gray-800 sticky top-0">
+                <div class="flex w-full items-center">
+                  <div class="flex items-center text-3xl text-gray-900 dark:text-white">
+                    <img src="https://assets.codepen.io/344846/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1582611188&width=512" class="w-12 mr-4 rounded-full" alt="profile" />
+                    Mert Cukuren
+                  </div>
+                  <div class="ml-auto sm:flex hidden items-center justify-end">
+                    <div class="text-right">
+                      <div class="text-xs text-gray-400 dark:text-gray-400">Account balance:</div>
+                      <div class="text-gray-900 text-lg dark:text-white">$2,794.00</div>
+                    </div>
+                    <button class="w-8 h-8 ml-4 text-gray-400 shadow dark:text-gray-400 rounded-full flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                      <svg viewBox="0 0 24 24" class="w-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="19" cy="12" r="1"></circle>
+                        <circle cx="5" cy="12" r="1"></circle>
+                      </svg>
+                    </button>
                   </div>
                 </div>
+                <div class="flex items-center space-x-3 sm:mt-7 mt-4">
+                  <a href="#" class="px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5">Activities</a>
+                  <a href="#" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5">Transfer</a>
+                  <a href="#" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5 sm:block hidden">Budgets</a>
+                  <a href="#" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5 sm:block hidden">Notifications</a>
+                  <a href="#" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5 sm:block hidden">Cards</a>
+                </div>
               </div>
-            </span>
+              <div class="sm:p-7 p-4">
+                <div class="flex w-full items-center mb-7">
+                  <button class="inline-flex mr-3 items-center h-8 pl-2.5 pr-2 rounded-md shadow text-gray-700 dark:text-gray-400 dark:border-gray-800 border border-gray-200 leading-none py-0">
+                    <svg viewBox="0 0 24 24" class="w-4 mr-2 text-gray-400 dark:text-gray-600" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    Last 30 days
+                    <svg viewBox="0 0 24 24" class="w-4 ml-1.5 text-gray-400 dark:text-gray-600" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <button class="inline-flex items-center h-8 pl-2.5 pr-2 rounded-md shadow text-gray-700 dark:text-gray-400 dark:border-gray-800 border border-gray-200 leading-none py-0">
+                    Filter by
+                    <svg viewBox="0 0 24 24" class="w-4 ml-1.5 text-gray-400 dark:text-gray-600" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="ml-auto text-gray-500 text-xs sm:inline-flex hidden items-center">
+                    <span class="mr-3">Page 2 of 4</span>
+                    <button class="inline-flex mr-2 items-center h-8 w-8 justify-center text-gray-400 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none py-0">
+                      <svg class="w-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                      </svg>
+                    </button>
+                    <button class="inline-flex items-center h-8 w-8 justify-center text-gray-400 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none py-0">
+                      <svg class="w-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <div class="ml-auto">
-                    <button title="See available tickets in this view" aria-label="play" class="border rounded-md px-3 py-2 leading-none">
-              Play
-            </button>
+                <table class="w-full text-left">
+                  <thead>
+                    <tr class="text-gray-400">
+                      <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Type</th>
+                      <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Where</th>
+                      <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800 hidden md:table-cell">Description</th>
+                      <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Amount</th>
+                      <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800 sm:text-gray-400 text-white">Date</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-600 dark:text-gray-100">
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-yellow-500" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <path fill="#03a9f4" d="M425.457 117.739c-3.121-1.838-6.961-1.966-10.197-.341-3.231 1.629-5.416 4.786-5.803 8.384-.384 3.499-.981 6.997-1.728 10.667-20.885 94.784-62.827 140.885-128.256 140.885h-96c-5.062.009-9.42 3.574-10.432 8.533l-32 149.995-5.717 38.187c-3.287 17.365 8.125 34.107 25.489 37.394 1.915.362 3.858.549 5.807.558h64.213c14.718.045 27.55-10 31.04-24.299l25.941-103.701h55.659c65.685 0 111.083-52.373 127.829-147.477 11.054-45.286-7.234-92.668-45.845-118.785z" />
+                            <path fill="#283593" d="M405.339 38.017C384.261 14.108 354.012.286 322.139.001h-176.64C119.064-.141 96.558 19.2 92.721 45.355L37.873 411.243c-2.627 17.477 9.41 33.774 26.887 36.402 1.586.239 3.189.357 4.793.356h81.92c5.062-.009 9.42-3.574 10.432-8.533l30.187-140.8h87.467c75.904 0 126.059-53.056 149.099-157.867.926-4.178 1.638-8.4 2.133-12.651 5.348-32.335-3.981-65.372-25.452-90.133z" />
+                          </svg>
+                          PayPal
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Subscription renewal</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $120.00</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            24.12.2020
+                            <div class="text-gray-400 text-xs">11:16 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <path fill="#f44336" d="M201.302 49.754l-192 24.939C3.949 75.384-.044 79.963 0 85.36v149.333c0 5.891 4.776 10.667 10.667 10.667h192c5.891 0 10.667-4.776 10.667-10.667V60.314c-.004-3.064-1.325-5.978-3.627-8-2.319-1.994-5.368-2.923-8.405-2.56z" />
+                            <path fill="#4caf50" d="M508.374 13.36c-2.286-2.06-5.35-3.032-8.405-2.667l-256 33.387c-5.352.691-9.346 5.27-9.301 10.667v179.947c0 5.891 4.776 10.667 10.667 10.667h256c5.891 0 10.667-4.776 10.667-10.667V21.36c-.005-3.064-1.327-5.978-3.628-8z" />
+                            <path fill="#2196f3" d="M202.667 266.693h-192C4.776 266.693 0 271.469 0 277.36v149.333c-.044 5.397 3.949 9.976 9.301 10.667l192 25.045c.455.031.911.031 1.365 0 5.891 0 10.667-4.776 10.667-10.667V277.36c.001-5.891-4.775-10.667-10.666-10.667z" />
+                            <path fill="#ffc107" d="M501.334 266.693h-256c-5.891 0-10.667 4.776-10.667 10.667v179.947c-.044 5.397 3.949 9.976 9.301 10.667l256 33.387c.455.031.911.031 1.365 0 5.891 0 10.667-4.776 10.667-10.667V277.36c0-5.891-4.775-10.667-10.666-10.667z" />
+                          </svg>
+                          Microsoft
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Subscription renewal</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $9.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            24.12.2020
+                            <div class="text-gray-400 text-xs">07:16 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <g fill="#37474f">
+                              <path d="M461.852 355.712c-1.692-2.616-4.443-4.362-7.531-4.779-40.621-5.306-69.25-42.537-63.944-83.158 3.748-28.694 23.84-52.588 51.465-61.205 5.61-1.798 8.701-7.803 6.903-13.413-.28-.873-.671-1.707-1.164-2.481-18.641-33.642-51.786-56.779-89.792-62.677-19.152.914-38.026 4.957-55.872 11.968-12.817 5.158-26.351 8.317-40.128 9.365-13.777-1.048-27.311-4.207-40.128-9.365-17.846-7.011-36.72-11.054-55.872-11.968-39.829 0-117.333 56.469-117.333 160 0 98.389 71.765 224 128 224 21.457.192 42.656-4.691 61.867-14.251 7.235-3.99 15.232-6.404 23.467-7.083 8.234.679 16.232 3.093 23.467 7.083 19.211 9.56 40.41 14.443 61.867 14.251 44.587 0 94.912-76.544 115.989-147.477.882-2.979.422-6.197-1.261-8.81z" />
+                              <path d="M251.121 128c64.772-.071 117.263-52.561 117.333-117.333C368.454 4.776 363.679 0 357.788 0c-64.772.071-117.263 52.561-117.333 117.333-.001 5.891 4.775 10.667 10.666 10.667z" />
+                            </g>
+                          </svg>
+                          Apple
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Macbook Pro 13"</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $1.499.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            24.12.2020
+                            <div class="text-gray-400 text-xs">11:03 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-green-500" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                          </svg>
+                          Income
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <img class="w-7 h-7 mr-2.5 border border-gray-200 dark:border-gray-800 rounded-full" src="https://images.unsplash.com/photo-1521587765099-8835e7201186?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="profile" />
+                          James Smith
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Invoice No: 37401</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-green-500">+ $60.00</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            13.11.2020
+                            <div class="text-gray-400 text-xs">09:45 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <g fill="#f44336">
+                              <path d="M211.563 26.133c-1.971-2.993-5.313-4.796-8.896-4.8h-192C4.776 21.333 0 26.109 0 32v448c-.001 5.07 3.566 9.439 8.533 10.453.702.141 1.417.213 2.133.213 4.255.015 8.111-2.5 9.813-6.4l192-448c1.43-3.315 1.085-7.128-.916-10.133zM265.877 187.989c-1.632-4.021-5.537-6.653-9.877-6.656-4.293-.001-8.169 2.571-9.835 6.528l-85.333 202.667c-2.286 5.43.263 11.684 5.692 13.97 1.311.552 2.72.836 4.142.836h77.931l29.419 78.421c1.564 4.158 5.541 6.912 9.984 6.912h85.333c5.891-.004 10.664-4.782 10.66-10.673-.001-1.373-.267-2.732-.783-4.004L265.877 187.989zM501.333 21.333h-192c-5.891-.021-10.683 4.738-10.704 10.629-.005 1.481.298 2.947.89 4.304l192 448c1.702 3.9 5.559 6.415 9.813 6.4.716-.001 1.431-.072 2.133-.213 4.967-1.014 8.534-5.384 8.533-10.453V32c.002-5.891-4.774-10.667-10.665-10.667z" />
+                            </g>
+                          </svg>
+                          Adobe
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Product purchased</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $49.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            10.03.2020
+                            <div class="text-gray-400 text-xs">10:29 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.652 427.652" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <path fill="#00d95f" d="M213.826 0C95.733 0 0 95.733 0 213.826s95.733 213.826 213.826 213.826 213.826-95.733 213.826-213.826S331.919 0 213.826 0zm93.06 310.32c-2.719 4.652-7.612 7.246-12.638 7.247-2.506 0-5.044-.645-7.364-2-38.425-22.456-82.815-26.065-113.295-25.138-33.763 1.027-58.523 7.692-58.769 7.76-7.783 2.126-15.826-2.454-17.961-10.236-2.134-7.781 2.43-15.819 10.209-17.962 1.116-.307 27.76-7.544 64.811-8.766 21.824-.72 42.834.801 62.438 4.52 24.83 4.71 47.48 12.978 67.322 24.574 6.973 4.074 9.321 13.03 5.247 20.001zm27.184-56.459c-3.22 5.511-9.016 8.583-14.97 8.584-2.968 0-5.975-.763-8.723-2.369-45.514-26.6-98.097-30.873-134.2-29.776-39.994 1.217-69.323 9.112-69.614 9.192-9.217 2.515-18.746-2.906-21.275-12.124-2.528-9.218 2.879-18.738 12.093-21.277 1.322-.364 32.882-8.937 76.77-10.384 25.853-.852 50.739.949 73.96 5.354 29.412 5.58 56.241 15.373 79.744 29.108 8.26 4.826 11.042 15.434 6.215 23.692zm16.711-51.335c-3.641 0-7.329-.936-10.7-2.906-108.207-63.238-248.572-25.643-249.977-25.255-11.313 3.117-23.008-3.527-26.124-14.839-3.117-11.312 3.527-23.008 14.839-26.124 1.621-.447 40.333-10.962 94.166-12.737 31.713-1.044 62.237 1.164 90.72 6.567 36.077 6.844 68.987 18.856 97.815 35.704 10.13 5.92 13.543 18.931 7.623 29.061-3.95 6.76-11.059 10.529-18.362 10.529z" />
+                          </svg>
+                          Spotify
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Subscription renewal</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $5.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            02.04.2020
+                            <div class="text-gray-400 text-xs">10:29 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.17 0.44 251.04 259.97" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <g fill="none" fill-rule="evenodd">
+                              <path fill="#f90" fill-rule="nonzero" d="M221.5 210.32C116.27 260.41 50.96 218.5 9.15 193.05c-2.59-1.6-6.98.38-3.17 4.76 13.93 16.89 59.57 57.6 119.15 57.6 59.63 0 95.1-32.54 99.53-38.21 4.4-5.63 1.3-8.73-3.16-6.88zM251.06 194c-2.83-3.68-17.19-4.36-26.22-3.25-9.05 1.07-22.64 6.6-21.46 9.93.61 1.24 1.85.68 8.06.12 6.24-.62 23.7-2.82 27.34 1.93 3.66 4.8-5.57 27.61-7.25 31.3-1.63 3.67.62 4.62 3.68 2.17 3.01-2.45 8.47-8.8 12.14-17.77 3.64-9.03 5.85-21.63 3.7-24.43z" />
+                              <path fill="#000" d="M150.74 108.13c0 13.14.34 24.1-6.3 35.77-5.37 9.49-13.86 15.32-23.35 15.32-12.95 0-20.5-9.86-20.5-24.43 0-28.75 25.77-33.97 50.15-33.97zm34.02 82.22a7.04 7.04 0 01-7.97.8c-11.2-9.3-13.19-13.61-19.36-22.48-18.5 18.88-31.6 24.52-55.6 24.52-28.37 0-50.48-17.5-50.48-52.56 0-27.38 14.85-46.02 35.96-55.13 18.32-8.06 43.89-9.49 63.43-11.72v-4.36c0-8.02.62-17.5-4.08-24.43-4.12-6.22-12-8.78-18.93-8.78-12.85 0-24.33 6.6-27.13 20.26-.57 3.03-2.8 6.02-5.84 6.16l-32.73-3.5c-2.75-.62-5.79-2.85-5.03-7.08C64.54 12.4 100.36.44 132.43.44c16.42 0 37.86 4.36 50.81 16.8 16.42 15.32 14.85 35.76 14.85 58.01v52.57c0 15.8 6.55 22.72 12.71 31.26 2.19 3.04 2.66 6.7-.1 8.97a1425.8 1425.8 0 00-25.85 22.4l-.1-.1" />
+                              <path fill="#f90" fill-rule="nonzero" d="M221.5 210.32C116.27 260.41 50.96 218.5 9.15 193.05c-2.59-1.6-6.98.38-3.17 4.76 13.93 16.89 59.57 57.6 119.15 57.6 59.63 0 95.1-32.54 99.53-38.21 4.4-5.63 1.3-8.73-3.16-6.88zM251.06 194c-2.83-3.68-17.19-4.36-26.22-3.25-9.05 1.07-22.64 6.6-21.46 9.93.61 1.24 1.85.68 8.06.12 6.24-.62 23.7-2.82 27.34 1.93 3.66 4.8-5.57 27.61-7.25 31.3-1.63 3.67.62 4.62 3.68 2.17 3.01-2.45 8.47-8.8 12.14-17.77 3.64-9.03 5.85-21.63 3.7-24.43z" />
+                              <path fill="#000" d="M150.74 108.13c0 13.14.34 24.1-6.3 35.77-5.37 9.49-13.86 15.32-23.35 15.32-12.95 0-20.5-9.86-20.5-24.43 0-28.75 25.77-33.97 50.15-33.97zm34.02 82.22a7.04 7.04 0 01-7.97.8c-11.2-9.3-13.19-13.61-19.36-22.48-18.5 18.88-31.6 24.52-55.6 24.52-28.37 0-50.48-17.5-50.48-52.56 0-27.38 14.85-46.02 35.96-55.13 18.32-8.06 43.89-9.49 63.43-11.72v-4.36c0-8.02.62-17.5-4.08-24.43-4.12-6.22-12-8.78-18.93-8.78-12.85 0-24.33 6.6-27.13 20.26-.57 3.03-2.8 6.02-5.84 6.16l-32.73-3.5c-2.75-.62-5.79-2.85-5.03-7.08C64.54 12.4 100.36.44 132.43.44c16.42 0 37.86 4.36 50.81 16.8 16.42 15.32 14.85 35.76 14.85 58.01v52.57c0 15.8 6.55 22.72 12.71 31.26 2.19 3.04 2.66 6.7-.1 8.97a1425.8 1425.8 0 00-25.85 22.4l-.1-.1" />
+                            </g>
+                          </svg>
+                          Amazon
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">PlayStation 5</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $399.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            08.09.2020
+                            <div class="text-gray-400 text-xs">11:00 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-green-500" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                          </svg>
+                          Income
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <img class="w-7 h-7 mr-2.5 border border-gray-200 dark:border-gray-800 rounded-full" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="profile" />
+                          Jane Cooper
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Invoice No: 12993</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-green-500">+ $24.00</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            01.04.2020
+                            <div class="text-gray-400 text-xs">09:45 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-yellow-500" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <path fill="#03a9f4" d="M425.457 117.739c-3.121-1.838-6.961-1.966-10.197-.341-3.231 1.629-5.416 4.786-5.803 8.384-.384 3.499-.981 6.997-1.728 10.667-20.885 94.784-62.827 140.885-128.256 140.885h-96c-5.062.009-9.42 3.574-10.432 8.533l-32 149.995-5.717 38.187c-3.287 17.365 8.125 34.107 25.489 37.394 1.915.362 3.858.549 5.807.558h64.213c14.718.045 27.55-10 31.04-24.299l25.941-103.701h55.659c65.685 0 111.083-52.373 127.829-147.477 11.054-45.286-7.234-92.668-45.845-118.785z" />
+                            <path fill="#283593" d="M405.339 38.017C384.261 14.108 354.012.286 322.139.001h-176.64C119.064-.141 96.558 19.2 92.721 45.355L37.873 411.243c-2.627 17.477 9.41 33.774 26.887 36.402 1.586.239 3.189.357 4.793.356h81.92c5.062-.009 9.42-3.574 10.432-8.533l30.187-140.8h87.467c75.904 0 126.059-53.056 149.099-157.867.926-4.178 1.638-8.4 2.133-12.651 5.348-32.335-3.981-65.372-25.452-90.133z" />
+                          </svg>
+                          PayPal
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Subscription renewal</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $120.00</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            24.12.2020
+                            <div class="text-gray-400 text-xs">11:16 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <path fill="#f44336" d="M201.302 49.754l-192 24.939C3.949 75.384-.044 79.963 0 85.36v149.333c0 5.891 4.776 10.667 10.667 10.667h192c5.891 0 10.667-4.776 10.667-10.667V60.314c-.004-3.064-1.325-5.978-3.627-8-2.319-1.994-5.368-2.923-8.405-2.56z" />
+                            <path fill="#4caf50" d="M508.374 13.36c-2.286-2.06-5.35-3.032-8.405-2.667l-256 33.387c-5.352.691-9.346 5.27-9.301 10.667v179.947c0 5.891 4.776 10.667 10.667 10.667h256c5.891 0 10.667-4.776 10.667-10.667V21.36c-.005-3.064-1.327-5.978-3.628-8z" />
+                            <path fill="#2196f3" d="M202.667 266.693h-192C4.776 266.693 0 271.469 0 277.36v149.333c-.044 5.397 3.949 9.976 9.301 10.667l192 25.045c.455.031.911.031 1.365 0 5.891 0 10.667-4.776 10.667-10.667V277.36c.001-5.891-4.775-10.667-10.666-10.667z" />
+                            <path fill="#ffc107" d="M501.334 266.693h-256c-5.891 0-10.667 4.776-10.667 10.667v179.947c-.044 5.397 3.949 9.976 9.301 10.667l256 33.387c.455.031.911.031 1.365 0 5.891 0 10.667-4.776 10.667-10.667V277.36c0-5.891-4.775-10.667-10.666-10.667z" />
+                          </svg>
+                          Microsoft
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Subscription renewal</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $9.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            24.12.2020
+                            <div class="text-gray-400 text-xs">07:16 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <g fill="#37474f">
+                              <path d="M461.852 355.712c-1.692-2.616-4.443-4.362-7.531-4.779-40.621-5.306-69.25-42.537-63.944-83.158 3.748-28.694 23.84-52.588 51.465-61.205 5.61-1.798 8.701-7.803 6.903-13.413-.28-.873-.671-1.707-1.164-2.481-18.641-33.642-51.786-56.779-89.792-62.677-19.152.914-38.026 4.957-55.872 11.968-12.817 5.158-26.351 8.317-40.128 9.365-13.777-1.048-27.311-4.207-40.128-9.365-17.846-7.011-36.72-11.054-55.872-11.968-39.829 0-117.333 56.469-117.333 160 0 98.389 71.765 224 128 224 21.457.192 42.656-4.691 61.867-14.251 7.235-3.99 15.232-6.404 23.467-7.083 8.234.679 16.232 3.093 23.467 7.083 19.211 9.56 40.41 14.443 61.867 14.251 44.587 0 94.912-76.544 115.989-147.477.882-2.979.422-6.197-1.261-8.81z" />
+                              <path d="M251.121 128c64.772-.071 117.263-52.561 117.333-117.333C368.454 4.776 363.679 0 357.788 0c-64.772.071-117.263 52.561-117.333 117.333-.001 5.891 4.775 10.667 10.666 10.667z" />
+                            </g>
+                          </svg>
+                          Apple
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Macbook Pro 13"</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $1.499.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            24.12.2020
+                            <div class="text-gray-400 text-xs">11:03 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-green-500" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                          </svg>
+                          Income
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <img class="w-7 h-7 mr-2.5 border border-gray-200 dark:border-gray-800 rounded-full" src="https://images.unsplash.com/photo-1521587765099-8835e7201186?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="profile" />
+                          James Smith
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Invoice No: 37401</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-green-500">+ $60.00</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            13.11.2020
+                            <div class="text-gray-400 text-xs">09:45 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <g fill="#f44336">
+                              <path d="M211.563 26.133c-1.971-2.993-5.313-4.796-8.896-4.8h-192C4.776 21.333 0 26.109 0 32v448c-.001 5.07 3.566 9.439 8.533 10.453.702.141 1.417.213 2.133.213 4.255.015 8.111-2.5 9.813-6.4l192-448c1.43-3.315 1.085-7.128-.916-10.133zM265.877 187.989c-1.632-4.021-5.537-6.653-9.877-6.656-4.293-.001-8.169 2.571-9.835 6.528l-85.333 202.667c-2.286 5.43.263 11.684 5.692 13.97 1.311.552 2.72.836 4.142.836h77.931l29.419 78.421c1.564 4.158 5.541 6.912 9.984 6.912h85.333c5.891-.004 10.664-4.782 10.66-10.673-.001-1.373-.267-2.732-.783-4.004L265.877 187.989zM501.333 21.333h-192c-5.891-.021-10.683 4.738-10.704 10.629-.005 1.481.298 2.947.89 4.304l192 448c1.702 3.9 5.559 6.415 9.813 6.4.716-.001 1.431-.072 2.133-.213 4.967-1.014 8.534-5.384 8.533-10.453V32c.002-5.891-4.774-10.667-10.665-10.667z" />
+                            </g>
+                          </svg>
+                          Adobe
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Product purchased</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $49.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            10.03.2020
+                            <div class="text-gray-400 text-xs">10:29 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.652 427.652" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <path fill="#00d95f" d="M213.826 0C95.733 0 0 95.733 0 213.826s95.733 213.826 213.826 213.826 213.826-95.733 213.826-213.826S331.919 0 213.826 0zm93.06 310.32c-2.719 4.652-7.612 7.246-12.638 7.247-2.506 0-5.044-.645-7.364-2-38.425-22.456-82.815-26.065-113.295-25.138-33.763 1.027-58.523 7.692-58.769 7.76-7.783 2.126-15.826-2.454-17.961-10.236-2.134-7.781 2.43-15.819 10.209-17.962 1.116-.307 27.76-7.544 64.811-8.766 21.824-.72 42.834.801 62.438 4.52 24.83 4.71 47.48 12.978 67.322 24.574 6.973 4.074 9.321 13.03 5.247 20.001zm27.184-56.459c-3.22 5.511-9.016 8.583-14.97 8.584-2.968 0-5.975-.763-8.723-2.369-45.514-26.6-98.097-30.873-134.2-29.776-39.994 1.217-69.323 9.112-69.614 9.192-9.217 2.515-18.746-2.906-21.275-12.124-2.528-9.218 2.879-18.738 12.093-21.277 1.322-.364 32.882-8.937 76.77-10.384 25.853-.852 50.739.949 73.96 5.354 29.412 5.58 56.241 15.373 79.744 29.108 8.26 4.826 11.042 15.434 6.215 23.692zm16.711-51.335c-3.641 0-7.329-.936-10.7-2.906-108.207-63.238-248.572-25.643-249.977-25.255-11.313 3.117-23.008-3.527-26.124-14.839-3.117-11.312 3.527-23.008 14.839-26.124 1.621-.447 40.333-10.962 94.166-12.737 31.713-1.044 62.237 1.164 90.72 6.567 36.077 6.844 68.987 18.856 97.815 35.704 10.13 5.92 13.543 18.931 7.623 29.061-3.95 6.76-11.059 10.529-18.362 10.529z" />
+                          </svg>
+                          Spotify
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Subscription renewal</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $5.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            02.04.2020
+                            <div class="text-gray-400 text-xs">10:29 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-gray-400" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                          Card
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.17 0.44 251.04 259.97" class="w-7 h-7 p-1.5 mr-2.5 rounded-lg border border-gray-200 dark:border-gray-800">
+                            <g fill="none" fill-rule="evenodd">
+                              <path fill="#f90" fill-rule="nonzero" d="M221.5 210.32C116.27 260.41 50.96 218.5 9.15 193.05c-2.59-1.6-6.98.38-3.17 4.76 13.93 16.89 59.57 57.6 119.15 57.6 59.63 0 95.1-32.54 99.53-38.21 4.4-5.63 1.3-8.73-3.16-6.88zM251.06 194c-2.83-3.68-17.19-4.36-26.22-3.25-9.05 1.07-22.64 6.6-21.46 9.93.61 1.24 1.85.68 8.06.12 6.24-.62 23.7-2.82 27.34 1.93 3.66 4.8-5.57 27.61-7.25 31.3-1.63 3.67.62 4.62 3.68 2.17 3.01-2.45 8.47-8.8 12.14-17.77 3.64-9.03 5.85-21.63 3.7-24.43z" />
+                              <path fill="#000" d="M150.74 108.13c0 13.14.34 24.1-6.3 35.77-5.37 9.49-13.86 15.32-23.35 15.32-12.95 0-20.5-9.86-20.5-24.43 0-28.75 25.77-33.97 50.15-33.97zm34.02 82.22a7.04 7.04 0 01-7.97.8c-11.2-9.3-13.19-13.61-19.36-22.48-18.5 18.88-31.6 24.52-55.6 24.52-28.37 0-50.48-17.5-50.48-52.56 0-27.38 14.85-46.02 35.96-55.13 18.32-8.06 43.89-9.49 63.43-11.72v-4.36c0-8.02.62-17.5-4.08-24.43-4.12-6.22-12-8.78-18.93-8.78-12.85 0-24.33 6.6-27.13 20.26-.57 3.03-2.8 6.02-5.84 6.16l-32.73-3.5c-2.75-.62-5.79-2.85-5.03-7.08C64.54 12.4 100.36.44 132.43.44c16.42 0 37.86 4.36 50.81 16.8 16.42 15.32 14.85 35.76 14.85 58.01v52.57c0 15.8 6.55 22.72 12.71 31.26 2.19 3.04 2.66 6.7-.1 8.97a1425.8 1425.8 0 00-25.85 22.4l-.1-.1" />
+                              <path fill="#f90" fill-rule="nonzero" d="M221.5 210.32C116.27 260.41 50.96 218.5 9.15 193.05c-2.59-1.6-6.98.38-3.17 4.76 13.93 16.89 59.57 57.6 119.15 57.6 59.63 0 95.1-32.54 99.53-38.21 4.4-5.63 1.3-8.73-3.16-6.88zM251.06 194c-2.83-3.68-17.19-4.36-26.22-3.25-9.05 1.07-22.64 6.6-21.46 9.93.61 1.24 1.85.68 8.06.12 6.24-.62 23.7-2.82 27.34 1.93 3.66 4.8-5.57 27.61-7.25 31.3-1.63 3.67.62 4.62 3.68 2.17 3.01-2.45 8.47-8.8 12.14-17.77 3.64-9.03 5.85-21.63 3.7-24.43z" />
+                              <path fill="#000" d="M150.74 108.13c0 13.14.34 24.1-6.3 35.77-5.37 9.49-13.86 15.32-23.35 15.32-12.95 0-20.5-9.86-20.5-24.43 0-28.75 25.77-33.97 50.15-33.97zm34.02 82.22a7.04 7.04 0 01-7.97.8c-11.2-9.3-13.19-13.61-19.36-22.48-18.5 18.88-31.6 24.52-55.6 24.52-28.37 0-50.48-17.5-50.48-52.56 0-27.38 14.85-46.02 35.96-55.13 18.32-8.06 43.89-9.49 63.43-11.72v-4.36c0-8.02.62-17.5-4.08-24.43-4.12-6.22-12-8.78-18.93-8.78-12.85 0-24.33 6.6-27.13 20.26-.57 3.03-2.8 6.02-5.84 6.16l-32.73-3.5c-2.75-.62-5.79-2.85-5.03-7.08C64.54 12.4 100.36.44 132.43.44c16.42 0 37.86 4.36 50.81 16.8 16.42 15.32 14.85 35.76 14.85 58.01v52.57c0 15.8 6.55 22.72 12.71 31.26 2.19 3.04 2.66 6.7-.1 8.97a1425.8 1425.8 0 00-25.85 22.4l-.1-.1" />
+                            </g>
+                          </svg>
+                          Amazon
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">PlayStation 5</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">- $399.99</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            08.09.2020
+                            <div class="text-gray-400 text-xs">11:00 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <svg viewBox="0 0 24 24" class="w-4 mr-5 text-green-500" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                          </svg>
+                          Income
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <img class="w-7 h-7 mr-2.5 border border-gray-200 dark:border-gray-800 rounded-full" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="profile" />
+                          Jane Cooper
+                        </div>
+                      </td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Invoice No: 12993</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-green-500">+ $24.00</td>
+                      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center">
+                          <div class="sm:flex hidden flex-col">
+                            01.04.2020
+                            <div class="text-gray-400 text-xs">09:45 AM</div>
+                          </div>
+                          <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                            <svg viewBox="0 0 24 24" class="w-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="19" cy="12" r="1"></circle>
+                              <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="flex w-full mt-5 space-x-2 justify-end">
+                  <button class="inline-flex items-center h-8 w-8 justify-center text-gray-400 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none">
+                    <svg class="w-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none">1</button>
+                  <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-800 dark:text-white leading-none">2</button>
+                  <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none">3</button>
+                  <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none">4</button>
+                  <button class="inline-flex items-center h-8 w-8 justify-center text-gray-400 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none">
+                    <svg class="w-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
                 </div>
-            </header>
-
-            <!-- content overflow section 
-                remove table and thead but keep tbody and change tbody to section, in order
-                to have scrollable overflow section -->
-            <table aria-describedby="info-popup" aria-label="open tickets"
-                class="border-t w-full min-h-0 h-full flex flex-col">
-                <thead class="flex w-full flex-col px-4">
-                    <tr class="border-b flex">
-                        <th class="font-semibold text-left py-3 pl-3 pr-1 w-24">
-                            <input type="checkbox" name="" id="" />
-                        </th>
-                        <th class="font-semibold text-left py-3 px-1 w-24 truncate">
-                            ID
-                        </th>
-                        <th class="font-semibold text-left py-3 px-1 w-full max-w-xs xl:max-w-lg truncate">
-                            Subject
-                        </th>
-                        <th class="font-semibold text-left py-3 px-1 flex-1 truncate">
-                            Requester
-                        </th>
-                        <th class="font-semibold text-left py-3 px-1 flex-1 truncate">
-                            Requester updated
-                        </th>
-                        <th class="font-semibold text-left py-3 px-1 flex-1 truncate">
-                            Group
-                        </th>
-                        <th class="font-semibold text-left py-3 px-1 flex-1 truncate">
-                            Assignee
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="flex w-full flex-col flex-1 min-h-0 overflow-hidden px-4">
-                    <!-- low -->
-                    <tr class="border-b flex">
-                        <th class="bg-gray-100 text-left px-3 py-2 flex-1" colspan="7">
-                            <h2 class="text-sm">
-                                <span class="font-normal mr-1">Priority</span><span>Low</span>
-                            </h2>
-                        </th>
-                    </tr>
-                    <tr role="row" class="hover:bg-blue-100 border-b flex cursor-pointer">
-                        <td role="cell" headers="select" class="py-3 pl-3 pr-1 w-24 flex items-start">
-                            <input class="mt-1" type="checkbox" />
-                            <div class="ml-auto relative group">
-                                <span style="
-                          padding: 2px 5px;
-                          font-size: 0.7rem;
-                          position: relative;
-                          bottom: 2px;
-                        " class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white">Open</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    Quo laudantium error corporis accusamus unde,
-                                    labore quidem non officiis.
-                                </h1>
-                                <p class="mt-3">
-                                    Hi Team,
-                                    <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Error accusantium molestias fugit commodi
-                          doloremque. <br /><br />
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold">Nico Braun</p>
-                                    <p class="ml-auto text-gray-700 text-sm">
-                                        Yesterday 10:33
-                                    </p>
-                                </div>
-                                <p class="mt-2">
-                                    Dolore odio error inventore sint et dolorum
-                                    asperiores exercitationem, quisquam esse.
-                                </p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 w-24">
-                            #12534
-                        </td>
-                        <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
-                            <div class="relative group w-full">
-                                <p class="w-full truncate">
-                                    Quo laudantium error corporis accusamus unde, labore
-                                    quidem non officiis.
-                                </p>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white">Open</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    Quo laudantium error corporis accusamus unde,
-                                    labore quidem non officiis.
-                                </h1>
-                                <p class="mt-3">
-                                    Hi Team,
-                                    <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Error accusantium molestias fugit commodi
-                          doloremque. <br /><br />
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold">Nico Braun</p>
-                                    <p class="ml-auto text-gray-700 text-sm">
-                                        Yesterday 10:33
-                                    </p>
-                                </div>
-                                <p class="mt-2">
-                                    Dolore odio error inventore sint et dolorum
-                                    asperiores exercitationem, quisquam esse.
-                                </p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Marla Darsuz
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Tuesday 09:56
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            UK Support
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Nico Braun
-                        </td>
-                    </tr>
-                    <tr role="row" class="hover:bg-blue-100 border-b flex cursor-pointer">
-                        <td role="cell" headers="select" class="py-3 pl-3 pr-1 w-24 flex items-start">
-                            <input class="mt-1" type="checkbox" />
-                            <div class="ml-auto relative group">
-                                <span style="
-                          padding: 2px 5px;
-                          font-size: 0.7rem;
-                          position: relative;
-                          bottom: 2px;
-                        " class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white">Open</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit.
-                                </h1>
-                                <p class="mt-3">
-                                    Hi, <br />
-                                    <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Error accusantium molestias fugit commodi
-                          doloremque. <br /><br />
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit. Odit consequatur natus aut
-                          reiciendis nisi sed! Temporibus, quibusdam
-                          voluptates? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold">Nico Braun</p>
-                                    <p class="ml-auto text-gray-700 text-sm">
-                                        Today 13:30
-                                    </p>
-                                </div>
-                                <p class="mt-2">
-                                    Dolore odio error inventore sint et dolorum
-                                    asperiores exercitationem, quisquam esse tempora
-                                    aliquam voluptates quibusdam quae debitis
-                                    laboriosam iure ea quos.
-                                </p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 w-24">
-                            #12534
-                        </td>
-                        <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
-                            <div class="relative group w-full">
-                                <p class="w-full truncate">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                </p>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white">Open</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit.
-                                </h1>
-                                <p class="mt-3">
-                                    Hi, <br />
-                                    <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Error accusantium molestias fugit commodi
-                          doloremque. <br /><br />
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit. Odit consequatur natus aut
-                          reiciendis nisi sed! Temporibus, quibusdam
-                          voluptates? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold">Nico Braun</p>
-                                    <p class="ml-auto text-gray-700 text-sm">
-                                        Today 13:30
-                                    </p>
-                                </div>
-                                <p class="mt-2">
-                                    Dolore odio error inventore sint et dolorum
-                                    asperiores exercitationem, quisquam esse tempora
-                                    aliquam voluptates quibusdam quae debitis
-                                    laboriosam iure ea quos.
-                                </p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Jim Beam
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Friday 10:29
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            UK Support
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Nico Braun
-                        </td>
-                    </tr>
-                    <tr role="row" class="hover:bg-blue-100 border-b flex cursor-pointer">
-                        <td role="cell" headers="select" class="py-3 pl-3 pr-1 w-24 flex items-start">
-                            <input class="mt-1" type="checkbox" />
-                            <div class="ml-auto relative group">
-                                <span style="
-                          padding: 2px 5px;
-                          font-size: 0.7rem;
-                          position: relative;
-                          bottom: 2px;
-                        " class="font-mono rounded-sm bg-yellow-400 text-black leading-none">N</span>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-yellow-400 text-black">New</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    Excepturi at labore vel accusamus exercitationem
-                                    quam, amet provident!
-                                </h1>
-                                <p class="mt-3">
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Odit consequatur natus aut
-                                    reiciendis nisi sed! Temporibus, quibusdam
-                                    voluptates? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4 hidden">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold"></p>
-                                    <p class="ml-auto text-gray-700 text-sm"></p>
-                                </div>
-                                <p class="mt-2"></p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 w-24">
-                            #12534
-                        </td>
-                        <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
-                            <div class="relative group w-full">
-                                <p class="w-full truncate">
-                                    Excepturi at labore vel accusamus exercitationem quam,
-                                    amet provident!
-                                </p>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-yellow-400 text-black">New</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    Excepturi at labore vel accusamus exercitationem
-                                    quam, amet provident!
-                                </h1>
-                                <p class="mt-3">
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Odit consequatur natus aut
-                                    reiciendis nisi sed! Temporibus, quibusdam
-                                    voluptates? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4 hidden">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold"></p>
-                                    <p class="ml-auto text-gray-700 text-sm"></p>
-                                </div>
-                                <p class="mt-2"></p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Paul Ferrez
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Today 13:45
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            -
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            -
-                        </td>
-                    </tr>
-                    <tr role="row" class="hover:bg-blue-100 border-b flex cursor-pointer">
-                        <td role="cell" headers="select" class="py-3 pl-3 pr-1 w-24 flex items-start">
-                            <input class="mt-1" type="checkbox" />
-                            <div class="ml-auto relative group">
-                                <span style="
-                          padding: 2px 5px;
-                          font-size: 0.7rem;
-                          position: relative;
-                          bottom: 2px;
-                        " class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white">Open</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    impedit possimus praesentium voluptatum omnis
-                                    assumenda rem autem magni consequatur nostrum
-                                    distinctio unde.
-                                </h1>
-                                <p class="mt-3">
-                                    Hi Team,
-                                    <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Error accusantium molestias fugit commodi
-                          doloremque. <br /><br />
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold">Nico Braun</p>
-                                    <p class="ml-auto text-gray-700 text-sm">
-                                        Yesterday 10:33
-                                    </p>
-                                </div>
-                                <p class="mt-2">
-                                    Dolore odio error inventore sint et dolorum
-                                    asperiores exercitationem, quisquam esse.
-                                </p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 w-24">
-                            #12534
-                        </td>
-                        <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
-                            <div class="relative group w-full">
-                                <p class="w-full truncate">
-                                    impedit possimus praesentium voluptatum omnis assumenda
-                                    rem autem magni consequatur nostrum distinctio unde.
-                                </p>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white">Open</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                                <span class="ml-1">(Low)</span>
-                            </div>
-                            </header>
-                            <section class="mt-5">
-                                <h1 class="text-sm font-semibold mt-3">
-                                    impedit possimus praesentium voluptatum omnis
-                                    assumenda rem autem magni consequatur nostrum
-                                    distinctio unde.
-                                </h1>
-                                <p class="mt-3">
-                                    Hi Team,
-                                    <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Error accusantium molestias fugit commodi
-                          doloremque. <br /><br />
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit? ...
-                                </p>
-                            </section>
-                            <footer class="mt-4">
-                                <p class="text-gray-600">Latest Comments</p>
-                                <hr class="mt-1" />
-                                <div class="flex mt-3">
-                                    <p class="font-semibold">Nico Braun</p>
-                                    <p class="ml-auto text-gray-700 text-sm">
-                                        Yesterday 10:33
-                                    </p>
-                                </div>
-                                <p class="mt-2">
-                                    Dolore odio error inventore sint et dolorum
-                                    asperiores exercitationem, quisquam esse.
-                                </p>
-                            </footer>
-                            </article>
-                            </span>
-                            <!-- end dropdown -->
-                            </div>
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Sara Dechicco
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Thursday 09:22
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            UK Support
-                        </td>
-                        <td class="py-3 px-1 flex-1 truncate">
-                            Nico Braun
-                        </td>
-                    </tr>
-                    <!-- medium -->
-                    <tr class="border-b flex">
-                        <th class="bg-gray-100 text-left px-3 py-2 flex-1" colspan="7">
-                            <h2 class="text-sm">
-                                <span class="font-normal mr-1">Priority</span>
-                                <span>Medium</span>
-                            </h2>
-                        </th>
-                    </tr>
-                    <tr role="row" class="hover:bg-blue-100 border-b flex cursor-pointer">
-                        <td role="cell" headers="select" class="py-3 pl-3 pr-1 w-24 flex items-start">
-                            <input class="mt-1" type="checkbox" />
-                            <div class="ml-auto relative group">
-                                <span style="
-                          padding: 2px 5px;
-                          font-size: 0.7rem;
-                          position: relative;
-                          bottom: 2px;
-                        " class="font-mono rounded-sm bg-yellow-400 text-black leading-none">N</span>
-                                <!-- dropdown -->
-                                <span class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
-                    <article>
-                      <header>
-                        <div>
-                          <span class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-yellow-400 text-black">New</span>
-                                <span class="ml-2 text-gray-700">Incident #12534</span>
-                    
-</body>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body> --}}
 </html>
