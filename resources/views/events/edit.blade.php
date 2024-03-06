@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="dark-mode">
-
-<head>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body class="bg-gray-900 text-white">
-
+@extends('dashboard.layout')
+@section('content')
     <div class="container mx-auto mt-8">
         <h1 class="text-3xl font-semibold mb-6">Edit Event</h1>
         <form action="{{ route('events.update', $event->id) }}" method="post">
@@ -46,11 +39,10 @@
             </div>
 
             <div class="mb-6">
-                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update Event</button>
+                <button type="submit" class="bg-custom-color hover:bg-gray-700 text-white py-2 px-4 rounded-lg focus:outline-none focus:ring focus:border-blue-300 transition-all duration-300">Update Event</button>
+
             </div>
+           
         </form>
     </div>
-
-</body>
-
-</html>
+@endsection
