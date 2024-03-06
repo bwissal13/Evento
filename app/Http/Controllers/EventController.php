@@ -38,11 +38,18 @@ class EventController extends Controller
 
    public function store(EventRequest $request)
    {
-       Event::create($request->validated());
+       $data = $request->validated();
+   
+       $data['auto_accept'] = $request->has('auto_accept') && $request->input('auto_accept') === '1';
+   
+       $data['auto_accept'] = (bool)$data['auto_accept'];
+   
+       Event::create($data);
    
        return redirect()->route('events.index')->with('success', 'Event created successfully!');
    }
-
+   
+   
 
     /**
      * Display the specified resource.
