@@ -23,6 +23,7 @@ class EventRequest extends FormRequest
             'location' => 'required|string',
             'available_seats' => 'required|integer',
             'category_id' => 'required|exists:categories,id',
+            'price' => 'required',
         ];
     }
 }
