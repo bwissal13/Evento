@@ -8,7 +8,7 @@
                                     <!-- LOGO START
                                     ============================================= -->
                                     <div class="logo">
-                                        <a href="{{route('home')}}"><img src="img/dugem-logos.png" alt="Dugem Logo" /></a>
+                                        <a href=""><img src="img/dugem-logos.png" alt="Dugem Logo" /></a>
                                     </div>
                                     <!-- LOGO END -->
                                 </div>
@@ -22,7 +22,7 @@
                                         </label>
                                         <!-- Sample menu definition -->
                                         <ul id="main-menu" class="sm sm-clean">
-                                            <li class="menu-item"><a href="{{route('home')}}" class="menu-link active">Home</a></li>
+                                            <li class="menu-item"><a href="" class="menu-link active">Home</a></li>
                                             <li class="menu-item"><a href="{{ route('about') }}" class="menu-link">About</a></li>
                                             <li class="menu-item"><a href="{{route('event')}}" class="menu-link">Event</a></li>
                                             <li class="menu-item"><a href="blog.html" class="menu-link">News</a></li>
