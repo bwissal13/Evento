@@ -90,16 +90,19 @@
                             <tr>
                                 <td>Date</td>
                                 <td class="event-thumb-head"></td>
-                                <td>Artist</td>
-                                <td>Event</td>
+                                <td>Title</td>
+                                <td>Location</td>
+                                <td>Category</td>
                                 <td>Ticket</td>
+                                
+
                             </tr>
                             <tr class="space">
                                 <td>
                                     &nbsp;
                                 </td>
                             </tr>
-                            <tr>
+                            {{-- <tr>
                                 <td class="event-date">26/09/2021</td>
                                 <td class="event-thumb">
                                     <a href="single-event.html">
@@ -114,13 +117,36 @@
                                     <a href="#" class="button button-white rsvp">BOOK</a>
                                     <a href="#" class="button button-white">BUY TICKET</a>
                                 </td>
-                            </tr>
-                            <tr class="space">
-                                <td>
-                                    &nbsp;
-                                </td>
-                            </tr>
-                            <tr>
+                            </tr> --}}
+                            
+        @foreach($events as $event)
+        <tr>
+           
+           
+            <td>{{ \Carbon\Carbon::parse($event->date)->format('d/m/Y') }}</td>
+            <td class="event-thumb">
+                <a href="{{ route('events.show', $event->id) }}">
+                    <img width="70" height="100" src="{{ asset('img/upcoming-event-1.png') }}" alt="table-1">
+                </a>
+            </td>
+         
+            <td>{{ $event->title }}</td>
+            <td>{{ $event->location }}</td>
+            <td>{{ $event->category->name }}</td>
+            <td class="event-ticket-link">
+             
+                <a href="" class="button button-white">Details</a>
+            </td>
+           
+        </tr>
+
+        <tr class="space">
+            <td>&nbsp;</td>
+        </tr>
+        
+        @endforeach
+                            
+                            {{-- <tr>
                                 <td class="event-date">26/03/2021</td>
                                 <td class="event-thumb">
                                     <a href="single-event.html">
@@ -199,7 +225,7 @@
                                 <td>
                                     &nbsp;
                                 </td>
-                            </tr>
+                            </tr> --}}
                         </table>
                         <div class="event-mobile">
                             <ul class="event-list">
@@ -448,7 +474,7 @@
                                                 </div>
                                                 <div class="post-date">
                                                     <a href="#">
-                                                        <span>{{ $event->date->format('F d, Y') }}</span>
+                                                        <span>{{ $event->date}}</span>
                                                     </a>
                                                 </div>
                                             </div>
