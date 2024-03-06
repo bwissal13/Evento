@@ -14,9 +14,11 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        $reservations = Reservation::paginate(10);
+        $reservations = Reservation::with(['user', 'event'])->get();
+    
         return view('reservations.index', compact('reservations'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -29,11 +31,19 @@ class ReservationController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreReservationRequest $request)
+    public function store(Request $request)
     {
-        Reservation::create($request->validated());
+        $data = $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'event_id' => 'required|exists:events,id',
+            'auto_approve' => 'boolean',
+        ]);
+    
+        Reservation::create($data);
+    
         return redirect()->route('reservations.index')->with('success', 'Reservation created successfully!');
     }
+    
 
     /**
      * Display the specified resource.
@@ -54,18 +64,29 @@ class ReservationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateReservationRequest $request, Reservation $reservation)
+    public function update(Request $request, $id)
     {
-        $reservation->update($request->validated());
+        $reservation = Reservation::findOrFail($id);
+    
+        $data = $request->validate([
+            'auto_approve' => 'boolean',
+        ]);
+    
+        $reservation->update($data);
+    
         return redirect()->route('reservations.index')->with('success', 'Reservation updated successfully!');
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Reservation $reservation)
-    {
-        $reservation->delete();
-        return redirect()->route('reservations.index')->with('success', 'Reservation deleted successfully!');
-    }
+    public function destroy($id)
+{
+    $reservation = Reservation::findOrFail($id);
+    $reservation->delete();
+
+    return redirect()->route('reservations.index')->with('success', 'Reservation deleted successfully!');
+}
+
 }
