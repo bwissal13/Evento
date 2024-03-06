@@ -21,20 +21,11 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        return view('users.create');
-    }
-
+   
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreUserRequest $request)
-    {
-        User::create($request->validated());
-        return redirect()->route('users.index')->with('success', 'User created successfully!');
-    }
-
+   
     /**
      * Display the specified resource.
      */
@@ -48,7 +39,10 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('users.edit', compact('user'));
+       // Fetch available roles (you may adjust this based on your role retrieval logic)
+       $roles = \Spatie\Permission\Models\Role::pluck('name', 'id');
+        
+       return view('users.edit', compact('user', 'roles'));
     }
 
     /**
@@ -56,8 +50,9 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        $user->update($request->validated());
-        return redirect()->route('users.index')->with('success', 'User updated successfully!');
+        $user->syncRoles($request->input('roles', []));
+
+        return redirect()->route('users.index')->with('success', 'User roles updated successfully!');
     }
 
     /**
@@ -68,4 +63,7 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('users.index')->with('success', 'User deleted successfully!');
     }
+
+    
+    
 }
