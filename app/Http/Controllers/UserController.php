@@ -48,13 +48,23 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
+    // public function update(UpdateUserRequest $request, User $user)
+    // {
+    //     dd(auth()->user());
+    //     $user->syncRoles($request->input('roles', []));
+
+    //     return redirect()->route('users.index')->with('success', 'User roles updated successfully!');
+    // }
     public function update(UpdateUserRequest $request, User $user)
     {
+        $this->authorize('update-user'); // Check authorization using a gate
+    
         $user->syncRoles($request->input('roles', []));
-
+    
         return redirect()->route('users.index')->with('success', 'User roles updated successfully!');
     }
-
+    
+    
     /**
      * Remove the specified resource from storage.
      */
