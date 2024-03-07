@@ -30,4 +30,12 @@ class Reservation extends Model
     {
         return $this->hasOne(Payment::class);
     }
+    protected static function booted()
+    {
+        static::creating(function ($reservation) {
+            if ($reservation->auto_approve) {
+                $reservation->status = 'confirmed';
+            }
+        });
+    }
 }

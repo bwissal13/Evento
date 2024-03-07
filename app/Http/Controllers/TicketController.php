@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\Ticket;
 use App\Models\Reservation;
 use PDF;
@@ -11,24 +12,12 @@ class TicketController extends Controller
 {
   
 
-// public function generate($reservation)
-// {
-//     // Logic to fetch reservation and related event details
-//     $reservation = Reservation::findOrFail($reservation);
-//     $event = $reservation->event;
-
-//     // Generate a random ticket code
-//     $randomlyGeneratedCode = 'TICKET-' . rand(1000, 9999);
-
-//     // Generate PDF content (you may need to customize this based on your needs)
-//     $pdf = PDF::loadView('tickets.ticket', compact('reservation', 'event', 'randomlyGeneratedCode'));
-
-//     // Return the PDF as a download
-//     return $pdf->download('ticket.pdf');
-// }
-// In your TicketController.php
-
-
+    public function index()
+    {
+        $tickets = Ticket::with('reservation.event')->get();
+dd($tickets);
+        return view('tickets.index', compact('tickets'));
+    }
 
 public function generate($reservation)
 {

@@ -25,23 +25,7 @@
             </div>
         </div>
 
-        @if($reservation->ticket)
-            <div class="mt-6">
-                <h2 class="text-2xl font-bold mb-4 uppercase">Ticket Details</h2>
-                <p><strong>Ticket Code:</strong> {{ $reservation->ticket->ticket_code }}</p>
-                <p><strong>Created At:</strong> {{ $reservation->ticket->created_at }}</p>
-                
-                <!-- Display Event Information -->
-                <h2 class="text-2xl font-bold mb-4 uppercase mt-6">Event Information</h2>
-                <p><strong>Title:</strong> {{ $reservation->event->title }}</p>
-                <p><strong>Description:</strong> {{ $reservation->event->description }}</p>
-                <p><strong>Date:</strong> {{ $reservation->event->date }}</p>
-                <p><strong>Location:</strong> {{ $reservation->event->location }}</p>
-            </div>
-        @else
-            <p>No ticket associated with this reservation.</p>
-        @endif
-
+       
         @if($reservation->status == 'confirmed')
         <form id="generatePdfForm" action="{{ route('tickets.generate', $reservation->id) }}" method="get" class="mt-6">
             @csrf

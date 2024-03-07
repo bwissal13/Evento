@@ -14,4 +14,12 @@ class Ticket extends Model
     {
         return $this->belongsTo(Reservation::class);
     }
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($ticket) {
+            $ticket->ticket_code = 'TICKET-' . uniqid();
+        });
+    }
 }

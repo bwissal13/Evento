@@ -62,8 +62,8 @@ Route::resource('categories', CategoryController::class);
 Route::resource('home', HomeController::class);
 Route::resource('users', UserController::class);
 Route::resource('reservations', ReservationController::class);
-
 Route::get('/tickets/generate/{reservation}', [TicketController::class, 'generate'])->name('tickets.generate');
+Route::get('/tickets', [TicketController::class, 'index'])->name('tickets.index');
 
 // Route::post("/reservations" , [ReservationController::class])
 
