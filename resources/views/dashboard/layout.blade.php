@@ -24,6 +24,18 @@
 <body>
     @include('dashboard.sidebar')
     <div id="content" class="bg-white/10 col-span-9 rounded-lg p-6">
+        @if(session('error'))
+    <div class="alert alert-error">
+        {{ session('error') }}
+    </div>
+@endif
+
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
         @yield('content')
     </div>
 </body>

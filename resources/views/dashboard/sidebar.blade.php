@@ -3,15 +3,17 @@
         <div id="menu" class="bg-white/10 col-span-3 rounded-lg p-4 ">
             <h1 class="font-bold text-lg lg:text-3xl bg-gradient-to-br from-white via-white/50 to-transparent bg-clip-text text-transparent">Evento<span class="text-indigo-400">.</span></h1>
             <p class="text-slate-400 text-sm mb-2">Welcome back,</p>
-            <a href="#" class="flex flex-col space-y-2 md:space-y-0 md:flex-row mb-5 items-center md:space-x-2 hover:bg-white/10 group transition duration-150 ease-linear rounded-lg group w-full py-3 px-2">
+          
+            <a href="{{ route('profile.edit') }}" class="flex flex-col space-y-2 md:space-y-0 md:flex-row mb-5 items-center md:space-x-2 hover:bg-white/10 group transition duration-150 ease-linear rounded-lg group w-full py-3 px-2">
                 <div>
                     <img class="rounded-full w-10 h-10 relative object-cover" src="https://img.freepik.com/free-photo/no-problem-concept-bearded-man-makes-okay-gesture-has-everything-control-all-fine-gesture-wears-spectacles-jumper-poses-against-pink-wall-says-i-got-this-guarantees-something_273609-42817.jpg?w=1800&t=st=1669749937~exp=1669750537~hmac=4c5ab249387d44d91df18065e1e33956daab805bee4638c7fdbf83c73d62f125" alt="">
                 </div>
                 <div>
-                    <p class="font-medium group-hover:text-indigo-400 leading-4">Jim Smith</p>
-                    <span class="text-xs text-slate-400">Pantazi LLC</span>
+                    <p class="font-medium group-hover:text-indigo-400 leading-4">{{ auth()->user()->name }}</p>
+                    <span class="text-xs text-slate-400">{{ auth()->user()->email }}</span>
                 </div>
             </a>
+            
             <hr class="my-2 border-slate-700">
             <div id="menu" class="flex flex-col space-y-2 my-5">
                 <a href="#" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
@@ -74,5 +76,23 @@
                     </div>
                 </a>
             </div>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.707 6.293a1 1 0 00-1.414 1.414L19.586 12l-3.293 3.293a1 1 0 101.414 1.414l4-4a1 1 0 000-1.414l-4-4a1 1 0 00-.707-.293zM4 12h14" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Logout</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Log out of your account</p>
+                    </div>
+                </div>
+            </a>
+            
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            
             <p class="text-sm text-center text-gray-600">v2.0.0.3 | &copy; 2022 Pantazi Soft</p>
         </div>
