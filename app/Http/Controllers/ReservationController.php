@@ -76,8 +76,11 @@ class ReservationController extends Controller
         }
     
         // Create the reservation
-        Reservation::create($input);
-    
+        $reservation = Reservation::create($input);
+        if ($reservation->status === 'confirmed') {
+            // Redirect to the ticket page
+            return redirect()->route('tickets.generate', $reservation)->with('success', 'Reservation confirmed. You can download your ticket.');
+        }
         // Redirect or respond as needed
         return redirect()->route('reservations.index')->with('success', 'Reservation created successfully!');
     }
@@ -86,7 +89,7 @@ class ReservationController extends Controller
      */
     public function show(Reservation $reservation)
     {
-        return view('reservations.show', compact('reservation'));
+        return view('tickets.show', compact('reservation'));
     }
 
     /**
