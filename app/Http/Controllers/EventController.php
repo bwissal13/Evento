@@ -38,11 +38,13 @@ class EventController extends Controller
 
    public function store(EventRequest $request)
    {
+
        $data = $request->validated();
    
        $data['auto_accept'] = $request->has('auto_accept') && $request->input('auto_accept') === '1';
    
        $data['auto_accept'] = (bool)$data['auto_accept'];
+       $data['user_id'] = auth()->id();
    
        Event::create($data);
    
@@ -67,7 +69,15 @@ class EventController extends Controller
         $categories=Category::all();
         return view('events.edit', compact('event','categories'));
     }
-
+    // public function showSinglePage()
+    // {
+    //     return view('frontEnd.single');
+    // }
+    public function showSinglePage(Event $event)
+    {
+        return view('frontEnd.single', compact('event'));
+    }
+    
 
     /**
      * Update the specified resource in storage.
