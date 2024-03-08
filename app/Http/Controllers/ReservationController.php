@@ -7,6 +7,7 @@ use App\Models\Reservation;
 use App\Http\Requests\StoreReservationRequest;
 use App\Http\Requests\UpdateReservationRequest;
 use App\Models\Event;
+use App\Models\Ticket;
 use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
@@ -17,10 +18,9 @@ class ReservationController extends Controller
     public function index()
     {
         $reservations = Reservation::with(['user', 'event'])->get();
-    
+
         return view('reservations.index', compact('reservations'));
     }
-    
 
     /**
      * Show the form for creating a new resource.
@@ -33,28 +33,66 @@ class ReservationController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+  
+    
     // public function store(Request $request)
     // {
     //     // Validate the incoming request data
-    //     // $data = $request->validate([
-    //     //     'user_id' => 'required|exists:users,id',
-    //     //     'event_id' => 'required|exists:events,id',
-    //     //     'auto_approve' => 'boolean',
-    //     // ]);
-        
+    //     $request->validate([
+    //         'event_id' => 'required|exists:events,id',
+    //         'auto_approve' => 'boolean',
+    //     ]);
+    
     //     // Add the authenticated user's ID to the data
-        
-    //     $inp = $request->all();
-    //     $inp['user_id'] = Auth::id();
-    //     $ap = Event::where("auto_accept" , " = " , $inp["event_id"] )->first();
-    //     $inp["auto_accept"] = $ap["auto_accept"];
-    //     // dd($inp);
-
+    //     $input = $request->all();
+    //     $input['user_id'] = Auth::id();
+    
+    //     // Check if the user already has a reservation for the event
+    //     $existingReservation = Reservation::where('user_id', $input['user_id'])
+    //         ->where('event_id', $input['event_id'])
+    //         ->first();
+    
+    //     if ($existingReservation) {
+    //         // Check if the reservation is confirmed
+    //         if ($existingReservation->status === 'confirmed') {
+    //             // Generate a ticket code
+    //             $ticketCode = 'TICKET-' . rand(1000, 9999);
+    
+    //             // Create a new ticket
+    //             $ticket = new Ticket([
+    //                 'reservation_id' => $existingReservation->id,
+    //                 'ticket_code' => $ticketCode,
+    //             ]);
+    //             $ticket->save();
+    
+    //             // Redirect to the ticket page
+    //             return redirect()->route('tickets.generate', $existingReservation)->with('success', 'Reservation confirmed. You can download your ticket.');
+    //         } else {
+    //             // Reservation status is not confirmed, show a message
+    //             return back()->with('error', 'Reservation status is not confirmed yet.');
+    //         }
+    //     }
+    
     //     // Create the reservation
-    //     Reservation::create($inp);
-        
-    //     // // Redirect or respond as needed
-    //     return redirect()->route('reservations.index')->with('success', 'Reservation created successfully!');
+    //     $reservation = Reservation::create($input);
+    
+    //     if ($reservation->status === 'confirmed') {
+    //         // Generate a ticket code
+    //         $ticketCode = 'TICKET-' . rand(1000, 9999);
+    
+    //         // Create a new ticket
+    //         $ticket = new Ticket([
+    //             'reservation_id' => $reservation->id,
+    //             'ticket_code' => $ticketCode,
+    //         ]);
+    //         $ticket->save();
+    
+    //         // Redirect to the ticket page
+    //         return redirect()->route('tickets.generate', $reservation)->with('success', 'Reservation confirmed. You can download your ticket.');
+    //     } else {
+    //         // Reservation status is not confirmed, show a message
+    //         return redirect()->route('reservations.index')->with('error', 'Reservation status is not confirmed yet.');
+    //     }
     // }
     public function store(Request $request)
     {
@@ -63,27 +101,73 @@ class ReservationController extends Controller
             'event_id' => 'required|exists:events,id',
             'auto_approve' => 'boolean',
         ]);
-    
+
         // Add the authenticated user's ID to the data
         $input = $request->all();
         $input['user_id'] = Auth::id();
-    
-        // Get the related event and fetch its auto_approve value
+
+        // Check if the user already has a reservation for the event
+        $existingReservation = Reservation::where('user_id', $input['user_id'])
+            ->where('event_id', $input['event_id'])
+            ->first();
+
+        // Check if there are available seats in the associated event
         $event = Event::find($input['event_id']);
-    
-        if ($event) {
-            $input['auto_approve'] = $event->auto_accept;
+        if (!$event || $event->available_seats <= 0) {
+            // No available seats, show a message
+            return back()->with('error', 'No available seats for this event.');
         }
-    
+
+        if ($existingReservation) {
+            // Check if the reservation is confirmed
+            if ($existingReservation->status === 'confirmed') {
+                // Generate a ticket code
+                $ticketCode = 'TICKET-' . rand(1000, 9999);
+
+                // Create a new ticket
+                $ticket = new Ticket([
+                    'reservation_id' => $existingReservation->id,
+                    'ticket_code' => $ticketCode,
+                ]);
+                $ticket->save();
+
+                // Redirect to the ticket page
+                return redirect()->route('tickets.generate', $existingReservation)->with('success', 'Reservation confirmed. You can download your ticket.');
+            } else {
+                // Reservation status is not confirmed, show a message
+                return back()->with('error', 'Reservation status is not confirmed yet.');
+            }
+        }
+
         // Create the reservation
         $reservation = Reservation::create($input);
+
+        // Update available seats in the associated event
+        $event->decrement('available_seats');
+
+        // Save the changes to the database
+        $event->save();
+
         if ($reservation->status === 'confirmed') {
+            // Generate a ticket code
+            $ticketCode = 'TICKET-' . rand(1000, 9999);
+
+            // Create a new ticket
+            $ticket = new Ticket([
+                'reservation_id' => $reservation->id,
+                'ticket_code' => $ticketCode,
+            ]);
+            $ticket->save();
+
             // Redirect to the ticket page
             return redirect()->route('tickets.generate', $reservation)->with('success', 'Reservation confirmed. You can download your ticket.');
+        } else {
+            // Reservation status is not confirmed, show a message
+            return redirect()->route('reservations.index')->with('error', 'Reservation status is not confirmed yet.');
         }
-        // Redirect or respond as needed
-        return redirect()->route('reservations.index')->with('success', 'Reservation created successfully!');
     }
+
+    
     /**
      * Display the specified resource.
      */
@@ -102,7 +186,6 @@ class ReservationController extends Controller
             return view('reservations.edit', compact('reservation'));
         } else {
             // Redirect or respond with an error if the user is not authorized
-    
             return redirect()->route('reservations.index')->with('error', 'You are not authorized to edit this reservation.');
         }
     }
@@ -131,11 +214,10 @@ class ReservationController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy($id)
-{
-    $reservation = Reservation::findOrFail($id);
-    $reservation->delete();
+    {
+        $reservation = Reservation::findOrFail($id);
+        $reservation->delete();
 
-    return redirect()->route('reservations.index')->with('success', 'Reservation deleted successfully!');
-}
-
+        return redirect()->route('reservations.index')->with('success', 'Reservation deleted successfully!');
+    }
 }
